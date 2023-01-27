@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       prompt: message,
