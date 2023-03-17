@@ -11,11 +11,11 @@ form.addEventListener('submit', async (event) => {
   }
 
   // Envía una solicitud a la API de ChatGPT con el mensaje del usuario
-  const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+  const response = await fetch(' /completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       prompt: message,
