@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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' 
     },
     body: JSON.stringify({
       prompt: message,
@@ -36,3 +36,5 @@ form.addEventListener('submit', async (event) => {
   // Limpia el campo de entrada de mensajes
   messageInput.value = '';
 });
+
+// 17 de marzo de 2023
