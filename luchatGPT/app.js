@@ -11,7 +11,7 @@ form.addEventListener('submit', async (event) => {
   }
 
   // Envía una solicitud a la API de ChatGPT con el mensaje del usuario
-  const response = await fetch(' /completions', {
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
