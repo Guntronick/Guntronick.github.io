@@ -1,0 +1,109 @@
+/* Inicio Filosofía */
+
+    /* Inicio Filosofía Título */
+
+    .seccionFilosofia {
+        height: 24rem;
+        background-color: #ffffff;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+    }
+
+    .seccionFilosofiaTitulo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        h2 {
+            color: #363940;
+            text-transform: uppercase;
+            font-size: 3rem;
+            margin-top: 5rem;
+            font-weight: bold;
+        }
+
+        p {
+            color: #505050;
+            font-size: 2rem;
+        }
+    }
+
+    /* Fin Filosofía Título */
+
+    /* Inicio Sección Datos Relevantes */
+
+    .cardDatosRelevantes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 28rem;
+        margin-inline: 1.5rem;
+
+        h3 {
+            color: #363940;
+        }
+    }
+
+    .seccionDatosRelevantes {
+        height: 56.3rem;
+        background-color: #ffffff;
+        margin-inline: auto;
+        margin-bottom: 0rem;
+        background-color: #f8f8f8;
+
+        p {
+            color: #505050;
+            font-size: 2rem;
+    
+        }
+    }
+
+    .seccionDatosRelevantesTitulo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 3rem;
+
+        h2 {
+            color: #363940;
+            text-transform: uppercase;
+            font-size: 3rem;
+            margin-top: 5rem;
+            font-weight: bold;
+        }
+    }
+
+    /* Fin Sección Datos Relevantes */
+
+    /* Inicio Cunter */
+
+    .counter, .counter2, .counter3, .counter4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 4em;
+
+        &:not(.is-visible) {
+            visibility: hidden;
+        }
+    }
+
+    /* Fin Counter */
+
+    /* Inicio Info Datos Relevantes */
+
+    .infoRelevante {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    /* Fin Info Datos Relevantes */
+
+
+/* Fin Filosofía */

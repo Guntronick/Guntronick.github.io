@@ -1,0 +1,142 @@
+/* ============================= */
+
+   /* Inicio CSS Reset */
+    html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 2rem;
+    /* Referencia 20px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1096px;
+}
+
+/* Fin CSS Reset */
+
+/* ============================= */
+
+    /* Inicio index */
+
+        /* Inicio CSS Main */
+        
+        h1, h2, h3 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .backindex {
+            background-color: #363940;
+        }
+
+        .backgroundMain {
+            background-image: url(../img/indexBackground.jpg);
+            background-size: auto;
+            background-repeat: round;
+            background-attachment: fixed;
+        }
+
+        .backgroundMain, .tituloMain {
+            height: 82.3vh;
+        }
+
+        .tituloMain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                font-size: 5.5rem;
+                padding-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 4rem;        
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-size: 2rem;
+                color: #ffffff;
+                text-align: center;
+                padding-bottom: 4rem;
+            }
+        }
+        
+        .botonConoceme {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .conoceme {
+            background: none;
+            border: 0.2rem solid #ffffff;
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding: 0.8rem 1.2rem;
+            touch-action: manipulation;
+            cursor: pointer;
+            color: #ffffff;
+
+            &:hover {
+                background-color: #ffffff;
+                color: #363940;
+            }
+        }
+        
+        .index-ov-btn-grow-ellipse {
+            background: #fff; 
+            color: #363940; 
+            border: 2px solid #505050; 
+            padding: 14px 50px;
+            border-radius: 16px; 
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &::after {
+                content: "";
+                background: #424242; 
+                position: absolute;
+                z-index: -1;
+                padding: 16px 20px;
+                display: block;
+                border-radius: 50%;
+                left: -50%;
+                right: -50%;
+                top: -150%;
+                bottom: -150%;
+                transform: scale(0, 0);
+                transition: all 0.3s ease;
+            }
+
+            &:hover::after {
+                transition: all 0.3s ease-out;
+                transform: scale(1, 1);
+            }
+        }
+
+        /* Fin CSS Main */
+
+    /* Fin index */
+
+/* ============================= */

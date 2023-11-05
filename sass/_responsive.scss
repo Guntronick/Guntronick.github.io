@@ -1,0 +1,1763 @@
+/* Media Queries */
+
+/* ============================= */
+
+    /* De 0px a 479px */
+    @media screen and (max-width: 479px) {
+        
+        /* Inicio index */
+        
+        .backgroundMain, .tituloMain {
+            height: 90vh;
+        }
+
+        .footerStyle {
+            article {
+                p {
+                    color: #ffffff;
+                    display: flex;
+                    font-size: 0.95rem;
+                    width: 90vw;
+                    justify-content: center;
+                    margin-bottom: 0rem;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .copyright {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .tituloMain {
+            h1 {            
+                font-size: 3rem;
+                padding-top: 3rem;
+            }
+
+            h2 {            
+                font-size: 3rem;
+            }
+
+            p {            
+                font-size: 1.5rem;
+            }
+        }
+
+        .botonConoceme {
+            display: flex;
+            padding-bottom: 2rem;
+        }
+
+        /* Fin index */
+
+        /* Inicio Conoceme */
+
+        .quienSoy {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 131rem;
+        }
+
+        .seccionConocemeTitulo {
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                margin-top: 3rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 1.5rem;
+            }
+        }
+
+        .seccionConoceme {
+            height: 14rem;
+        }
+
+        .descargaCv {
+            width: 100vw;
+
+            h3 {
+                display: block;
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 2rem;
+                margin-top: 3rem;
+                font-weight: bold;
+                text-align: center;
+                height: 3rem;
+            }
+
+            p {
+                text-align: center;
+            }
+    
+        }
+
+        .descarga {
+            background-color: #f8f8f8;
+            height: 32rem;
+        }
+
+        .botonDescarga {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 9rem;
+            align-content: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .botonDescargaCV {
+            background-color: #363940;
+            border: 0.2rem solid #a9a9a9;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0.8rem 1.2rem;
+            touch-action: manipulation;
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            width: 12rem;
+            height: 4.4rem;
+            text-align: center;
+        }
+
+        .quienSoy {
+            .row {
+                .cardQuienSoy {
+                    width: 100%;
+                    display: flex;
+                    padding-inline: 0px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+            }
+        }
+
+        .card1 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardQuienSoy {
+            margin-top: 2.5rem;
+            height: 29rem;
+        }
+
+        .habilidades {
+            height: 43rem;
+            background-color: #f8f8f8;
+            padding-top: 3.5rem;
+            padding-inline: 3rem;
+        }
+
+        .habilidad {
+            h3 {
+                text-align: center;
+            }
+        }
+
+        /* Fin Conoceme */
+
+        /* Inicio Experiencia */
+
+        /* Inicio Trayectoria */
+
+        .cardTrayectoria {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-width: 30rem;
+            margin-inline: 3rem;
+
+            h3 {
+                color: #363940;
+            }
+        }
+
+        .iconoTrayectoria {
+            text-align: center;
+            font-size: 5rem;
+        }
+
+        .trayectoriaInfo {
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        .parrafoTrayectoria {
+            font-size: 2rem;
+        }
+
+        .fa-chevron-left, .fa-chevron-right {
+            font-size: 3rem;
+            color: #363940;
+            margin-top: -11rem;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #363940;
+        }
+
+        .carousel-item {
+            text-align: center;
+            margin-top: 7rem;
+        }
+
+        .carousel-indicators {
+            margin-bottom: 12rem;
+        }
+
+        /* Fin Trayectoria */
+
+        /* Inicio Testimonios */
+
+        .testimonios {
+            background-color: #f8f8f8;
+            height: 31rem;
+        }
+        
+        .parrafoTestimonio {
+            font-size: 1.5rem;
+        }
+
+        .carrusel {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .testimonio {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .spot {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .svg-wrapper {
+            margin-top: 0;
+            position: relative;
+            width: 150px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            &:hover #shape {
+                stroke-dasharray: 50 0;
+                stroke-width: 3px;
+                stroke-dashoffset: 0;
+                stroke: #000000;
+            }
+        }
+
+        #shape {
+            stroke-width: 6px;
+            fill: transparent;
+            stroke: #58646b;
+            stroke-dasharray: 85 400;
+            stroke-dashoffset: -220;
+            transition: 1s all ease;
+        }
+        
+        #text {
+            margin-top: -35px;
+            text-align: center;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 100;
+                font-size: 1.1em;
+            }
+        }
+
+        /* Fin Testimonios */
+
+    /* Fin Experiencia */
+
+    /* Inicio Filosofía */
+
+        /* Inicio Filosofía Título */
+
+        .seccionFilosofia {
+            height: 52rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        .seccionFilosofiaTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Fin Filosofía Título */
+
+        /* Inicio Sección Datos Relevantes */
+
+        .cardDatosRelevantes {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-width: 37rem;
+            margin-inline: 1.5rem;
+
+            h3 {
+                color: #363940;
+            }
+        }
+
+        .seccionDatosRelevantes {
+            height: 132.3rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+            background-color: #f8f8f8;
+
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        .seccionDatosRelevantesTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 3rem;
+
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+        }
+
+        /* Fin Sección Datos Relevantes */
+
+        /* Inicio Cunter */
+
+        .counter {
+            font-family: 'Roboto', sans-serif;
+            font-size: 4em;
+
+            &:not(.is-visible) {
+                visibility: hidden;
+            }
+        }
+
+        /* Fin Counter */
+
+        /* Inicio Info Datos Relevantes */
+
+        .infoRelevante {
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Fin Info Datos Relevantes */
+
+
+    /* Fin Filosofía */
+
+    /* Inicio Contacto */
+
+        /* Inicio Contacto Título */
+
+        .seccionContacto {
+            height: 20rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        .seccionContactoTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        /* Fin Contacto Título */
+
+        /* Inicio Info Contacto */
+
+        .seccionInfoContacto {
+            height: 249rem;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .infoGeneral {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0rem;
+            background-color: #f8f8f8;
+            height: max-content;
+
+            span {
+                margin-top: 1rem;
+            }
+
+            .text-center {
+                p{
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .infoGeneral h3, .formulario h3, .mapa h3, .redesSociales h3 {
+            display: block;
+            color: #363940;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            margin-top: 4rem;
+            font-weight: bold;
+            text-align: center;
+            height: 5rem;
+        }
+
+        /* Inicio CSS Formulario */
+
+        .botonFormulario {
+            color: #363940;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            text-align: center;
+            background: none;
+            border-color: #a9a9a9;
+        }
+
+        .botonEnviar, .botonLimpiar {
+            width: 13rem;
+            margin-inline: 2rem;
+            border-radius: 10%;
+        }
+
+        .formulario {
+            display: block;
+            width: 100%;
+            border-inline: none;
+            padding-bottom: 3rem;
+            height: max-content;
+            text-align: center;
+            font-size: 1.8rem;
+            background-color: #fff;
+        }
+
+        .formularioContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 3rem;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .textInfotmacion {
+            height: 13.3rem;
+        }
+
+        /* Fin CSS Formulario */
+
+        .infoMapa {
+            background-color: #f8f8f8;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            .mapa {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-block: 1rem;
+                align-items: center;
+            }
+
+            .datos {
+                width: 100%;
+    
+                h4 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+    
+                p {
+                    text-align: center;
+                }
+    
+                a {
+                    text-decoration: none;
+    
+                    &:link, &:visited {
+                        text-decoration: none;
+                        color: #363940;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }        
+
+        iframe {
+            display: block;
+            margin-top: 1rem;
+            max-width: 30rem;
+        }        
+
+        input, textarea, select {
+            width: 27rem;
+        }
+
+        form {
+            .formulario {
+                align-items: baseline;
+            }
+        }
+
+        label {
+            align-items: baseline;
+        }
+
+        /* Fin Info Contacto */
+
+        /* Inicio Sección RRSS */
+
+        .seccionRRSS {
+            height: 30rem;
+            background-color: #ffffff;
+        }
+
+        .redesSociales {
+            p {
+                color: #505050;
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 4rem;
+            }
+        }
+
+        .botonesRRSS {
+            color: #363940;
+            font-size: 3.5rem;
+            margin: 0rem;
+            padding: 2rem;
+        }
+
+        .botoneraRRSS {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .row {
+                display: inline;
+                
+                div {
+                    a {
+                        margin: 0rem;
+                    }
+                }
+            }
+        }
+
+        .infoContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ov-btn-grow-ellipse {
+            background: #fff; 
+            color: #363940; 
+            border: 2px solid #505050; 
+            padding: 6px 31px;
+            border-radius: 16px; 
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: inline-block;
+            margin-inline: 1rem;
+    
+            &:hover {
+                color: #fff;
+            }
+    
+            &::after {
+                content: "";
+                background: #363940; 
+                position: absolute;
+                z-index: -1;
+                padding: 16px 20px;
+                display: block;
+                border-radius: 50%;
+                left: -50%;
+                right: -50%;
+                top: -150%;
+                bottom: -150%;
+                transform: scale(0, 0);
+                transition: all 0.3s ease;
+            }
+    
+            &:hover::after {
+                transition: all 0.3s ease-out;
+                transform: scale(1, 1);
+            }
+        }
+
+        /* Fin Sección RRSS */
+
+        /* Fin Contacto */
+
+    }
+
+/* ============================= */
+    
+    /* De 480px a 767px */
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+
+        /* Inicio index */
+        .backgroundMain, .tituloMain {
+            height: 90vh;
+        }
+
+        .footerStyle {
+            article {
+                p {
+                    color: #ffffff;
+                    display: flex;
+                    font-size: 0.95rem;
+                    width: 85vw;
+                    justify-content: center;
+                    margin-bottom: 0rem;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .copyright {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .tituloMain {
+            h1 {            
+                font-size: 3rem;
+                padding-top: 3rem;
+            }
+
+            h2 {            
+                font-size: 3rem;
+            }
+
+            p {            
+                font-size: 1.5rem;
+            }
+        }
+
+        .botonConoceme {
+            display: flex;
+            padding-bottom: 2rem;
+        }
+
+        /* Fin index */
+
+        /* Inicio Conoceme */
+
+        .quienSoy {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 62rem;
+        }
+
+        .seccionConocemeTitulo {
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                margin-top: 3rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 1.5rem;
+            }
+        }
+
+        .seccionConoceme {
+            height: 14rem;
+            width: 100%;
+        }
+
+        .seccionConocemeTitulo {
+            width: 100%;
+        }
+
+        .descargaCv {
+            width: 100vw;
+
+            h3 {
+                display: block;
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 2rem;
+                margin-top: 3rem;
+                font-weight: bold;
+                text-align: center;
+                height: 3rem;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .descarga {
+            background-color: #f8f8f8;
+            height: 32rem;
+        }
+
+        .botonDescarga {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 9rem;
+            align-content: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .botonDescargaCV {
+            background-color: #363940;
+            border: 0.2rem solid #a9a9a9;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0.8rem 1.2rem;
+            touch-action: manipulation;
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            width: 12rem;
+            height: 4.4rem;
+            text-align: center;
+        }
+
+        .quienSoy {
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .cardQuienSoy {
+                    width: 50%;
+                    padding-inline: 1rem;
+                    height: 28rem;
+                }
+            }
+        }
+
+        .cardQuienSoy {
+            margin-top: 2.5rem;
+            height: 14rem;
+        }
+
+        .habilidades {
+            height: 42rem;
+            background-color: #f8f8f8;
+            padding-top: 3.5rem;
+            padding-inline: 3rem;
+        }
+
+        .habilidad {
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .card1 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Fin Conoceme */
+
+        .carousel-indicators {
+        margin-bottom: 15rem;
+        }
+
+        .fa-chevron-left, .fa-chevron-right {
+            font-size: 3rem;
+            color: #363940;
+            margin-top: -11rem;
+        }
+
+        .corusel-inner {
+            width: 90%;
+
+        }
+
+        .testimonios {
+            background-color: #f8f8f8;
+            height: 34rem;
+        }
+
+        .seccionDatosRelevantes {
+            height: 158.3rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 0rem;
+            background-color: #f8f8f8;
+    
+            p {
+                color: #505050;
+                font-size: 2rem;
+        
+            }
+        }
+
+        .seccionFilosofia {
+            height: 38rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+    
+        .seccionFilosofiaTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+    
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+    
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        .cardDatosRelevantes {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-width: 28rem;
+            margin-inline: 1.5rem;
+        }
+
+        .infoRelevante {
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0.5rem;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+            }
+        }
+
+        /* Inicio Contacto */
+
+        /* Inicio Contacto Título */
+
+        .seccionContacto {
+            height: 20rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+        }
+
+        .seccionContactoTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        /* Fin Contacto Título */
+
+        /* Inicio Info Contacto */
+
+        .seccionInfoContacto {
+            height: 207rem;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .infoGeneral {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0rem;
+            margin-block: 2rem;
+            height: max-content;
+            background-color: #f8f8f8;
+
+            span {
+                margin-top: 1rem;
+            }
+
+            .text-center {
+                p{
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .infoGeneral h3, .formulario h3, .mapa h3, .redesSociales h3 {
+            display: block;
+            color: #363940;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            margin-top: 4rem;
+            font-weight: bold;
+            text-align: center;
+            height: 5rem;
+        }
+
+        /* Inicio CSS Formulario */
+
+        .botonFormulario {
+            color: #363940;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            text-align: center;
+            background: none;
+            border-color: #a9a9a9;
+        }
+
+        .botonEnviar, .botonLimpiar {
+            width: 13rem;
+            margin-inline: 2rem;
+            border-radius: 10%;
+        }
+
+        .formulario {
+            display: block;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            border-inline: none;
+            padding-bottom: 3rem;
+            text-align: center;
+            font-size: 1.8rem;            
+            background-color: #fff;
+        }
+
+        .formularioContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 3rem;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .textInfotmacion {
+            height: 13.3rem;
+        }
+
+        /* Fin CSS Formulario */
+
+        .infoMapa {
+            background-color: #f8f8f8;
+            height: 82rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            .mapa {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-block: 0rem;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+
+            .datos {
+
+                h4 {
+                    font-size: 2rem;
+                    text-align: center;                
+                }
+    
+                p {
+                    text-align: center;
+                }
+    
+                a {
+                    text-decoration: none;
+    
+                    &:link, &:visited {
+                        text-decoration: none;
+                        color: #363940;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }        
+
+        iframe {
+            display: block;
+            margin-top: 1rem;
+            max-width: 45rem;
+        }        
+
+        input, textarea, select {
+            width: 45rem;
+        }
+
+        form {
+            .formulario {
+                align-items: baseline;
+            }
+        }
+
+        label {
+            align-items: baseline;
+        }
+
+        /* Fin Info Contacto */
+
+        /* Inicio Sección RRSS */
+
+        .seccionRRSS {
+            height: 30rem;
+            background-color: #ffffff;
+        }
+
+        .redesSociales {
+            p {
+                color: #505050;
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 4rem;
+            }
+        }
+
+        .botonesRRSS {
+            color: #363940;
+            font-size: 3.5rem;
+            margin: 0rem;
+            padding: 2rem;
+        }
+
+        .botoneraRRSS {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .row {
+                display: inline;
+                
+                div {
+                    a {
+                        margin: 0rem;
+                    }
+                }
+            }
+        }
+
+        .infoContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+    /* Fin Sección RRSS */
+    }
+
+/* ============================= */
+
+    /* De 768px a 1199px */
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+        /* Inicio index */
+
+        .backgroundMain, .tituloMain {
+            height: 90vh;
+        }
+
+        .footerStyle {
+            article {
+                p {
+                    color: #ffffff;
+                    display: flex;
+                    font-size: 1.3rem;
+                    width: 85vw;
+                    justify-content: center;
+                    margin-bottom: 0rem;
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .copyright {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .tituloMain {
+            h1 {            
+                font-size: 4rem;
+                padding-top: 2rem;
+            }
+
+            h2 {            
+                font-size: 4rem;
+            }
+
+            p {            
+                font-size: 2rem;
+            }
+        }
+
+        .botonConoceme {
+            display: flex;
+            padding-bottom: 2rem;
+        }
+
+        .liContainerFooter {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .footerStyle {
+            .row {
+                max-height: 6rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Fin index */
+
+        /* Inicio Conoceme */
+
+        .quienSoy {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 55rem;
+        }
+
+        .seccionConocemeTitulo {
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 3.5rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        .seccionConoceme {
+            height: 14rem;
+        }
+
+        .descargaCv {
+            width: 100vw;
+
+            h3 {
+                display: block;
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                margin-top: 3.5rem;
+                font-weight: bold;
+                text-align: center;
+                height: 3.5rem;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .descarga {
+            background-color: #f8f8f8;
+            height: 28rem;
+        }
+
+        .botonDescarga {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 9rem;
+            align-content: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .botonDescargaCV {
+            background-color: #363940;
+            border: 0.2rem solid #a9a9a9;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 0.8rem 1.2rem;
+            touch-action: manipulation;
+            cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+            width: 12rem;
+            height: 4.4rem;
+            text-align: center;
+        }
+
+        .quienSoy {
+            .row {
+                .cardQuienSoy {
+                    width: 50%;
+                    padding-inline: 1rem;
+                    height: 28rem;
+                }
+            }
+        }
+
+        .quienSoy {
+            .container {
+                max-width: 70rem;
+            }
+        }
+
+        .cardQuienSoy {
+            margin-top: 2.5rem;
+            height: 20rem;
+        }
+
+        .habilidades {
+            height: 27rem;
+            background-color: #f8f8f8;
+            padding-top: 3.5rem;
+            padding-inline: 3rem;
+        }
+
+        .habilidad {
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .card1 {
+            display: block;
+            position: relative;
+            max-width: 310px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Fin Conoceme */
+
+        .seccionDatosRelevantes {
+            height: 90rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 0rem;
+            background-color: #f8f8f8;
+    
+            p {
+                color: #505050;
+                font-size: 2rem;
+        
+            }
+        }
+
+        .cardDatosRelevantes {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-width: 30rem;
+            margin-inline: 1.5rem;
+        }
+
+        .seccionFilosofia {
+            height: 30rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        /* Inicio Contacto */
+
+        /* Inicio Contacto Título */
+
+        .seccionContacto {
+            height: 20rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 2rem;
+        }
+
+        .seccionContactoTitulo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                color: #363940;
+                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 5rem;
+                font-weight: bold;
+            }
+
+            p {
+                color: #505050;
+                font-size: 2rem;
+            }
+        }
+
+        /* Fin Contacto Título */
+
+        /* Inicio Info Contacto */
+
+        .seccionInfoContacto {
+            height: 236rem;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .mainContacto {
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #seccionRRSS {
+            padding-top: 0.5rem;
+            background-color: #f8f8f8;
+        }
+
+        .infoGeneral {
+            display: flex;
+            width: 50%;
+            margin-left: 0rem;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: #f8f8f8;
+
+            span {
+                margin-top: 1rem;
+                margin-inline: 3rem;
+            }
+
+            .text-center {
+                p{
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .infoMapa {        
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-block: 0rem;
+            background-color: #fff;
+
+            .datos {
+                margin-top: 2rem;
+            }
+        }
+
+        .infoGeneral h3, .formulario h3, .mapa h3, .redesSociales h3 {
+            display: block;
+            color: #363940;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            margin-top: 4rem;
+            font-weight: bold;
+            text-align: center;
+            height: 5rem;
+        }
+
+        /* Inicio CSS Formulario */
+
+        .botonFormulario {
+            color: #363940;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            text-align: center;
+            background: none;
+            border-color: #a9a9a9;
+        }
+
+        .botonEnviar, .botonLimpiar {
+            width: 13rem;
+            margin-inline: 2rem;
+            border-radius: 10%;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+            border-inline: none;
+            border-inline: 0.2rem solid #505050;
+            padding-bottom: 5rem;
+            flex-wrap: nowrap;
+            background-color: #f8f8f8;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .formularioContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 3rem;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .textInfotmacion {
+            height: 13.3rem;
+        }
+
+        /* Fin CSS Formulario */
+
+        .mapa {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-block: 0rem;
+            align-items: center;
+        }
+
+        iframe {
+            display: block;
+            margin-top: 1rem;
+            width: 60rem;
+        }
+
+        .datos {
+            width: 100%;
+
+            h4 {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+
+                &:link, &:visited {
+                    text-decoration: none;
+                    color: #363940;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        input, textarea, select {
+            width: 35rem;
+        }
+
+        form {
+            .formulario {
+                align-items: baseline;
+            }
+        }
+
+        label {
+            align-items: baseline;
+        }
+
+        /* Fin Info Contacto */
+
+        /* Inicio Sección RRSS */
+
+        .seccionRRSS {
+            height: 30rem;
+            background-color: #ffffff;
+        }
+
+        .redesSociales {
+            p {
+                color: #505050;
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 4rem;
+            }
+        }
+
+        .botonesRRSS {
+            color: #363940;
+            font-size: 3.5rem;
+            margin: 0rem;
+            padding: 2rem;
+        }
+
+        .botoneraRRSS {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .row {
+                display: inline;
+                
+                div {
+                    a {
+                        margin: 0rem;
+                    }
+                }
+            }
+        }
+
+        .infoContacto {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+    /* Fin Sección RRSS */
+    
+    }
+
+/* ============================= */
+
+    /* De 1366px a 1599 */
+    @media screen and (min-width: 1200px) and (max-width: 1919px) {
+        .backgroundMain, .tituloMain {
+            height: 82.3vh;
+        }
+
+        .seccionDatosRelevantes {
+            height: 58.3rem;
+            background-color: #ffffff;
+            margin-inline: auto;
+            margin-bottom: 0rem;
+            background-color: #f8f8f8;
+        }
+
+        iframe {
+            width: 38rem;
+        }
+
+        .mainContacto {
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .infoGeneral {
+            display: flex;
+            width: 33.3%;
+            margin-left: 0rem;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: #f8f8f8;
+
+            span {
+                    margin-top: 1rem;
+                    margin-inline: 3rem;
+
+                    .text-center {
+                        p {
+                            margin-inline: 3rem;
+                        }
+                    }
+                }
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            width: 33.3%;
+            align-items: center;
+            border-inline: 0.2rem solid #505050;
+            background-color: #f8f8f8;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .formularioContacto {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 3rem;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .infoMapa {
+            display: flex;
+            flex-direction: column;
+            width: 33.3%;
+            align-items: center;
+            background-color: #f8f8f8;
+        }
+
+        input, textarea, select {
+            width: 32rem;
+        }
+
+    }
+
+/* ============================= */
+
+    /* De 1920px a  */
+    @media screen and (min-width: 1920px) and (max-width: 3750px) {
+        .backgroundMain, .tituloMain {
+            height: 88.2vh;
+        }
+    }
+
