@@ -46,12 +46,17 @@ function cargarProvincias() {
 
 function abrirRoadMap() {
     var visitarBoton = document.getElementById("visitarRoadMap");
-    var enlace = visitarBoton.parentNode.getAttribute("href");
 
     visitarBoton.addEventListener("click", function() {
-        window.open(enlace, "_blank");
+        var enlace = visitarBoton.getAttribute("data-href"); // Utiliza data-href
+
+        if (enlace) {
+            window.location.href = enlace;
+        }
     });
 }
+
+abrirRoadMap();
 
 document.addEventListener("DOMContentLoaded", abrirRoadMap);
 
