@@ -162,6 +162,55 @@
             margin-top: 2.5rem;
             height: 29rem;
         }
+        
+        .repos {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 70rem;
+        }
+        
+        .repos {
+            .row {
+                .cardRepos {
+                    width: 100%;
+                    display: flex;
+                    padding-inline: 0px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+            }
+        }
+
+        .cardProyecto1 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardProyecto2 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardRepos {
+            margin-top: 2.5rem;
+            height: 29rem;
+        }
 
         .habilidades {
             height: 43rem;
@@ -871,6 +920,55 @@
             overflow: hidden;
         }
 
+        .repos {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 70rem;
+        }
+        
+        .repos {
+            .row {
+                .cardRepos {
+                    width: 100%;
+                    display: flex;
+                    padding-inline: 0px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+            }
+        }
+
+        .cardProyecto1 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardProyecto2 {
+            display: block;
+            position: relative;
+            max-width: 262px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardRepos {
+            margin-top: 2.5rem;
+            height: 29rem;
+        }
+
         /* Fin Conoceme */
 
         .carousel-indicators {
@@ -1357,6 +1455,52 @@
         .cardQuienSoy {
             margin-top: 2.5rem;
             height: 20rem;
+        }
+
+        .repos {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 34rem;
+        }
+        
+        .repos {
+            .row {
+                .cardRepos {
+                    width: 36%;
+                    padding-inline: 1rem;
+                    height: 35rem;
+                }
+            }
+        }
+
+        .cardProyecto1 {
+            display: block;
+            position: relative;
+            max-width: 310px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardProyecto2 {
+            display: block;
+            position: relative;
+            max-width: 310px;
+            border-radius: 4px;
+            padding: 32px 24px;
+            margin: 12px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cardRepos {
+            margin-top: 2.5rem;
+            height: 29rem;
         }
 
         .habilidades {
