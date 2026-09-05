@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <title>Luis Africano | Perfil Profesional</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Perfil profesional de Luis Africano, Ingeniero en Sistemas experto en Ciberseguridad, Automatización con IA e Infraestructura IT.">
+    <meta name="keywords"
+        content="Luis Africano, Ciberseguridad, Cybersecurity, Threat Intelligence, Automation, n8n, Python, Systems Engineer">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="img/favicon.webp">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="lang-es">
+    <canvas id="bg-mesh" aria-hidden="true"></canvas>
+
+    <!-- Sticky Navigation -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="#inicio" class="nav-brand">L·A</a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#inicio" class="nav-link" data-section="inicio">
+                    <span class="lang-es">Inicio</span>
+                    <span class="lang-en">Home</span>
+                </a>
+                <a href="#ecosistema" class="nav-link" data-section="ecosistema">
+                    <span class="lang-es">Ecosistema</span>
+                    <span class="lang-en">Ecosystem</span>
+                </a>
+                <a href="#trayectoria" class="nav-link" data-section="trayectoria">
+                    <span class="lang-es">Trayectoria</span>
+                    <span class="lang-en">Experience</span>
+                </a>
+                <a href="#proyectos" class="nav-link" data-section="proyectos">
+                    <span class="lang-es">Proyectos</span>
+                    <span class="lang-en">Projects</span>
+                </a>
+                <a href="#certificaciones" class="nav-link" data-section="certificaciones">
+                    <span class="lang-es">Certificaciones</span>
+                    <span class="lang-en">Certifications</span>
+                </a>
+                <!-- Selector de Idioma -->
+                <div class="lang-selector-wrapper">
+                    <div class="lang-selector">
+                        <button class="btn-lang active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+                        <span class="lang-divider">/</span>
+                        <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header id="inicio">
+            <div class="hero-card glass-card">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="lang-es">Disponible para Proyectos</span>
+                    <span class="lang-en">Available for Projects</span>
+                </div>
+                <h1>ING. LUIS AFRICANO</h1>
+                <p class="headline">
+                    <span class="lang-es">Ingeniero en Sistemas | IT Lead | Gerencia de TI y Ciberseguridad | Automatización de Procesos</span>
+                    <span class="lang-en">Systems Engineer | IT Lead | IT & Cybersecurity Management | Process Automation</span>
+                </p>
+                <p class="bio">
+                    <span class="lang-es">Ingeniero en Sistemas con amplia trayectoria liderando la gestión de infraestructura tecnológica, operaciones de ciberseguridad y automatización de procesos mediante Inteligencia Artificial. Experiencia demostrada en la coordinación de equipos técnicos, mitigación estratégica de riesgos, optimización de recursos y diseño de flujos de trabajo eficientes utilizando metodologías ágiles y Python. Capacidad probada para transformar la infraestructura de TI en un habilitador de negocio seguro, escalable y eficiente.</span>
+                    <span class="lang-en">Systems Engineer with an extensive career leading IT infrastructure management, cybersecurity operations, and process automation utilizing Artificial Intelligence. Proven experience coordinating technical teams, strategically mitigating risks, optimizing resources, and designing efficient workflows using agile methodologies and Python. Demonstrated ability to transform IT infrastructure into a secure, scalable, and efficient business enabler.</span>
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn btn-primary btn-cv-trigger">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        <span class="lang-es">Descargar CV</span>
+                        <span class="lang-en">Download Resume</span>
+                    </a>
+                    <a href="#" class="btn btn-outline btn-contact-trigger">
+                        <i class="fa-regular fa-circle-user" style="font-size: 1.2rem;"></i>
+                        <span class="lang-es">Contacto</span>
+                        <span class="lang-en">Contact</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Skills Bento Grid -->
+        <main>
+            <div class="section-header" id="ecosistema">
+                <h2 class="section-title">
+                    <span class="lang-es">Ecosistema Técnico</span>
+                    <span class="lang-en">Technical Ecosystem</span>
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Gestión y Liderazgo de TI Card -->
+                <div class="bento-item glass-card grid-gestion">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" width="20" height="8" rx="2" ry="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                <line x1="6" y1="4" x2="6" y2="4" />
+                                <line x1="6" y1="18" x2="6" y2="18" />
+                            </svg>
+                            <span class="lang-es">Gestión y Liderazgo de TI</span>
+                            <span class="lang-en">IT Management & Leadership</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Coordinación nacional de soporte, gestión de proveedores, administración de servidores (Windows/Linux) e infraestructura crítica.</span>
+                            <span class="lang-en">National support coordination, vendor management, server administration (Windows/Linux), and critical infrastructure.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Liderazgo de Equipos</span>
+                            <span class="lang-en">Team Leadership</span>
+                        </span>
+                        <span class="tag">
+                            <span class="lang-es">Gestión de Proveedores</span>
+                            <span class="lang-en">Vendor Management</span>
+                        </span>
+                        <span class="tag">SysAdmin Win/Linux</span>
+                        <span class="tag">
+                            <span class="lang-es">Infraestructura Crítica</span>
+                            <span class="lang-en">Critical Infrastructure</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Ciberseguridad Estratégica Card -->
+                <div class="bento-item glass-card grid-cyber">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span class="lang-es">Ciberseguridad Estratégica</span>
+                            <span class="lang-en">Strategic Cybersecurity</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Gestión de incidentes (SIEM), Threat Intelligence, marcos normativos y de seguridad (MITRE ATT&CK), y análisis forense.</span>
+                            <span class="lang-en">Incident management (SIEM), Threat Intelligence, regulatory & security frameworks (MITRE ATT&CK), and forensics.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Gestión de Incidentes (SIEM)</span>
+                            <span class="lang-en">Incident Management (SIEM)</span>
+                        </span>
+                        <span class="tag">Threat Intelligence</span>
+                        <span class="tag">MITRE ATT&CK</span>
+                        <span class="tag">
+                            <span class="lang-es">Análisis Forense</span>
+                            <span class="lang-en">Forensic Analysis</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gobernanza y Automatización Card -->
+                <div class="bento-item glass-card grid-gobernanza">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                            <span class="lang-es">Gobernanza y Automatización</span>
+                            <span class="lang-en">Governance & Automation</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Optimización de procesos con IA, desarrollo de scripts (Python, requests, json, pandas), automatizaciones n8n y gestión de APIs.</span>
+                            <span class="lang-en">Process optimization with AI, script development (Python, requests, json, pandas), n8n automations, and API management.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Go (Golang)</span>
+                        <span class="tag">
+                            <span class="lang-es">Automatización IA</span>
+                            <span class="lang-en">AI Automation</span>
+                        </span>
+                        <span class="tag">n8n</span>
+                        <span class="tag">
+                            <span class="lang-es">APIs & Integraciones</span>
+                            <span class="lang-en">APIs & Integrations</span>
+                        </span>
+                        <span class="tag">Pandas / JSON</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Redes y Proyectos Card -->
+                <div class="bento-item glass-card grid-redes">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="16" y="16" width="6" height="6" rx="1" />
+                                <rect x="2" y="16" width="6" height="6" rx="1" />
+                                <rect x="9" y="2" width="6" height="6" rx="1" />
+                                <path d="M12 8v8M5 16v-3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" />
+                            </svg>
+                            <span class="lang-es">Redes y Proyectos</span>
+                            <span class="lang-en">Networks & Projects</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Virtualización, optimización de VLANs corporativas, implementación de sistemas de tickets y metodologías ágiles (Scrum/Kanban).</span>
+                            <span class="lang-en">Virtualization, corporate VLAN optimization, ticketing system implementation, and agile methodologies (Scrum/Kanban).</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Virtualización</span>
+                            <span class="lang-en">Virtualization</span>
+                        </span>
+                        <span class="tag">VLAN Optimization</span>
+                        <span class="tag">Ticketing Systems</span>
+                        <span class="tag">Scrum / Kanban</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section-header" id="trayectoria">
+                <h2 class="section-title">
+                    <span class="lang-es">Trayectoria Profesional</span>
+                    <span class="lang-en">Professional Experience</span>
+                </h2>
+            </div>
+
+            <div class="timeline-track">
+                <div class="timeline-progress" id="timeline-progress"></div>
+                <div class="timeline-markers" id="timeline-markers"></div>
+                <div class="experience-list">
+                <!-- Banesco -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2006</span><span class="ty-sep"> – </span><span class="ty-end">2012</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Analista Senior de Soporte TI</span>
+                            <span class="lang-en">Senior IT Support Analyst</span>
+                        </h4>
+                        <span class="exp-company">Banesco Banco Universal</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Ejercí la Coordinación Nacional de Soporte Técnico, liderando equipos multidisciplinarios desplegados en distintas regiones y reduciendo los tiempos globales de gestión operativa en un 25%.</span>
+                                <span class="lang-en">Served as National Technical Support Coordinator, leading multidisciplinary teams across different regions and reducing overall operational management times by 25%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Dirigí y planifiqué el proyecto de migración masiva de sistemas operativos a nivel nacional (Windows XP a Windows 7), logrando el cumplimiento de plazos con una significativa reducción de costos tecnológicos.</span>
+                                <span class="lang-en">Directed and planned the national operating system mass migration project (Windows XP to Windows 7), meeting deadlines with a significant reduction in technology costs.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🏅 Logros Clave</span>
+                                <span class="lang-en">🏅 Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-60% Incidentes:</strong> Reducción masiva de fallas en servidores regionales.</span>
+                                    <span class="lang-en"><strong>-60% Incidents:</strong> Massive reduction in regional server failures.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Migración Eficiente:</strong> -45% tiempo y -20% costo en despliegue nacional Windows 7.</span>
+                                    <span class="lang-en"><strong>Efficient Migration:</strong> -45% time and -20% cost in national Windows 7 deployment.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Escalabilidad:</strong> Aumento del 40% en alcance de soporte metropolitano.</span>
+                                    <span class="lang-en"><strong>Scalability:</strong> 40% increase in metropolitan support coverage.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Julio 2006 – Octubre 2012</span>
+                            <span class="lang-en">July 2006 – October 2012</span>
+                        </div>
+                        <img src="img/banesco_banco_universal_logo.jpg" alt="Logo Banesco" class="company-logo">
+                    </div>
+                </article>
+                <!-- L'Oréal -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2012</span><span class="ty-sep"> – </span><span class="ty-end">2014</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Administrador de Infraestructura TI</span>
+                            <span class="lang-en">IT Infrastructure Administrator</span>
+                        </h4>
+                        <span class="exp-company">L'Oréal</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Administré la infraestructura tecnológica local, incluyendo servidores de datos, redes corporativas y plataformas de virtualización.</span>
+                                <span class="lang-en">Administered local technology infrastructure, including data servers, corporate networks, and virtualization platforms.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseñé y ejecuté el proyecto de optimización de VLANs corporativas, mejorando el rendimiento de la red, segmentando el tráfico y elevando los estándares de seguridad perimetral.</span>
+                                <span class="lang-en">Designed and executed the corporate VLAN optimization project, improving network performance, segmenting traffic, and raising perimeter security standards.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🏅 Logros Clave</span>
+                                <span class="lang-en">🏅 Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>VLAN Optimization:</strong> Reingeniería de la segmentación de red.</span>
+                                    <span class="lang-en"><strong>VLAN Optimization:</strong> Re-engineering network segmentation.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Virtualización:</strong> Migración exitosa de servidores críticos.</span>
+                                    <span class="lang-en"><strong>Virtualization:</strong> Successful migration of critical servers.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Agosto 2012 – Octubre 2014</span>
+                            <span class="lang-en">August 2012 – October 2014</span>
+                        </div>
+                        <img src="img/loral_logo.jpg" alt="Logo L'Oréal" class="company-logo">
+                    </div>
+                </article>
+
+                <!-- ASG S.A. -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2018</span><span class="ty-sep"> – </span><span class="ty-end">2020</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de Soporte TI</span>
+                            <span class="lang-en">IT Support Lead</span>
+                        </h4>
+                        <span class="exp-company">ASG S.A. Asesoramiento de Sistemas de Gestión</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Gestioné de punta a punta la infraestructura de servidores corporativos (Windows/Linux) e estaciones de trabajo, asegurando la alta disponibilidad de los servicios de la compañía.</span>
+                                <span class="lang-en">Managed corporate server infrastructure (Windows/Linux) and workstations from end to end, ensuring high availability of company services.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Lideré la implementación del nuevo sistema de gestión de tickets para la mesa de ayuda, estandarizando los flujos de soporte y optimizando los tiempos de respuesta del área.</span>
+                                <span class="lang-en">Led the implementation of the new help desk ticketing system, standardizing support workflows and optimizing the department's response times.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Supervisé el desarrollo, administración y seguridad del sitio web corporativo.</span>
+                                <span class="lang-en">Supervised corporate website development, administration, and security.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🏅 Logros Clave</span>
+                                <span class="lang-en">🏅 Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Ticketing System:</strong> Implementación de plataforma centralizada para soporte.</span>
+                                    <span class="lang-en"><strong>Ticketing System:</strong> Implementation of a centralized platform for support.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Digital Evolution:</strong> Modernización del sitio web y estrategias de E-mail Marketing.</span>
+                                    <span class="lang-en"><strong>Digital Evolution:</strong> Website modernization and Email Marketing strategies.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Marketing IT:</strong> Diseño y ejecución de campañas digitales de alto impacto.</span>
+                                    <span class="lang-en"><strong>Marketing IT:</strong> High-impact digital campaign design and execution.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Diciembre 2018 – Enero 2020</span>
+                            <span class="lang-en">December 2018 – January 2020</span>
+                        </div>
+                        <img src="img/asgconsultora_logo.jpg" alt="Logo ASG S.A." class="company-logo">
+                    </div>
+                </article>
+
+                <!-- Universidad Siglo 21 -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2020</span><span class="ty-sep"> – </span><span class="ty-end">2023</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de Línea (Cyberacademy, UCLAEH y APLV)</span>
+                            <span class="lang-en">Academic Line Manager (Cyberacademy, UCLAEH, and APLV)</span>
+                        </h4>
+                        <span class="exp-company">Universidad Siglo 21</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Coordiné y supervisé las líneas académicas y laboratorios tecnológicos especializados en Ciberseguridad, liderando equipos de tutores y gestionando la entrega de programas de alta especialización.</span>
+                                <span class="lang-en">Coordinated and supervised academic tracks and specialized technology laboratories in Cybersecurity, leading tutor teams and managing the delivery of highly specialized programs.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Dirigí proyectos de modernización de procesos internos mediante el desarrollo de herramientas de automatización en Python, consiguiendo una reducción del 75% en los tiempos de gestión y reportes.</span>
+                                <span class="lang-en">Directed internal process modernization projects by developing Python-based automation tools, achieving a 75% reduction in management and reporting times.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Implementé metodologías ágiles para la atención y resolución de requerimientos y consultas, logrando una mejora del 40% en los niveles de servicio (SLA) y satisfacción de los usuarios.</span>
+                                <span class="lang-en">Implemented agile methodologies for handling and resolving inquiries and requests, resulting in a 40% improvement in service level agreements (SLA) and user satisfaction.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🏅 Logros Clave</span>
+                                <span class="lang-en">🏅 Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-75% Procesamiento:</strong> Automatización total de reportes y calificaciones.</span>
+                                    <span class="lang-en"><strong>-75% Processing:</strong> Complete automation of reports and grading systems.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-40% Respuesta:</strong> Optimización de la gestión de consultas bajo marcos ágiles.</span>
+                                    <span class="lang-en"><strong>-40% Response:</strong> Query management optimization under agile frameworks.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-30% OPEX:</strong> Reducción de costos mediante migración a plataformas OpenSource.</span>
+                                    <span class="lang-en"><strong>-30% OPEX:</strong> Cost reduction through migration to OpenSource platforms.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Enero 2020 – Diciembre 2023</span>
+                            <span class="lang-en">January 2020 – December 2023</span>
+                        </div>
+                        <img src="img/lasiglo21_logo.jpg" alt="Logo Universidad Siglo 21" class="company-logo">
+                    </div>
+                </article>
+
+                <!-- Banco de Córdoba -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2023</span><span class="ty-sep"> – </span><span class="ty-end">2025</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de la Gestión de Incidentes de Ciberseguridad</span>
+                            <span class="lang-en">Cybersecurity Incident Management Lead</span>
+                        </h4>
+                        <span class="exp-company">Banco de Córdoba</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Lideré la estrategia de detección, monitoreo y resolución de incidentes de seguridad de la información corporativa mediante plataformas SIEM de escala global (QRadar y Microsoft Sentinel).</span>
+                                <span class="lang-en">Led the corporate information security incident detection, monitoring, and resolution strategy using global-scale SIEM platforms (QRadar and Microsoft Sentinel).</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseñé e implementé flujos de automatización basados en IA y Python para el procesamiento de alertas, logrando un incremento del 40% en la capacidad de detección de amenazas.</span>
+                                <span class="lang-en">Designed and implemented automation workflows based on AI and Python for alert processing, achieving a 40% increase in threat detection capability.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Optimicé el proceso de gobernanza e informes mediante la automatización de métricas clave, logrando una reducción del 50% en los tiempos de elaboración de reportes trimestrales para la alta dirección.</span>
+                                <span class="lang-en">Optimized the governance and reporting process through key metrics automation, reducing quarterly report generation times for senior executive management by 50%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Coordiné el mapeo estratégico de amenazas utilizando el marco MITRE ATT&CK y análisis avanzado de IoCs (VirusTotal/Maltego) para blindar la infraestructura crítica de la organización.</span>
+                                <span class="lang-en">Coordinated strategic threat mapping utilizing the MITRE ATT&CK framework and advanced IoC analysis (VirusTotal/Maltego) to secure the organization's critical infrastructure.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🏅 Logros Clave</span>
+                                <span class="lang-en">🏅 Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Eficiencia Ágil:</strong> Implementación de metodologías ágiles para la distribución de tareas.</span>
+                                    <span class="lang-en"><strong>Agile Efficiency:</strong> Implementation of agile methodologies for task distribution.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-50% Tiempo:</strong> Reducción drástica en la creación y entrega de reportes técnicos.</span>
+                                    <span class="lang-en"><strong>-50% Time:</strong> Drastic reduction in technical report creation and delivery.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-35% Costos:</strong> Optimización presupuestaria mediante automatización de tareas.</span>
+                                    <span class="lang-en"><strong>-35% Costs:</strong> Budget optimization through task automation.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>+40% Detección:</strong> Mejora en visibilidad de amenazas mediante integración de IA.</span>
+                                    <span class="lang-en"><strong>+40% Detection:</strong> Enhanced threat visibility through AI integration.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Diciembre 2023 – Mayo 2025</span>
+                            <span class="lang-en">December 2023 – May 2025</span>
+                        </div>
+                        <img src="img/bancodecordoba_logo.jpg" alt="Logo Banco de Córdoba" class="company-logo">
+                    </div>
+                </article>
+
+                                </div>
+            </div>
+
+            <!-- Own Projects Section -->
+            <div class="section-header" id="proyectos">
+                <h2 class="section-title">
+                    <span class="lang-es">Proyectos Propios</span>
+                    <span class="lang-en">Personal Projects</span>
+                </h2>
+            </div>
+
+            <!-- Tech Marquee: logo cloud con todas las tecnologías/herramientas del perfil -->
+            <div class="tech-marquee" role="img" aria-label="Tecnologías, lenguajes, frameworks y herramientas: Python, Go, Docker, Next.js, React, Tailwind CSS, HTML5, CSS3, JavaScript, Bootstrap, FastAPI, OpenCV, SQLite, Pandas, n8n, Linux, GitHub, Git, VirusTotal">
+                <div class="tech-marquee-track" aria-hidden="true">
+                    <div class="tech-marquee-item"><img src="img/tech/python.svg" alt="" loading="lazy"><span>Python</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/go.svg" alt="" loading="lazy"><span>Go</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/docker.svg" alt="" loading="lazy"><span>Docker</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/nextjs.svg" alt="" loading="lazy"><span>Next.js</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/react.svg" alt="" loading="lazy"><span>React</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/tailwindcss.svg" alt="" loading="lazy"><span>Tailwind CSS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/html5.svg" alt="" loading="lazy"><span>HTML5</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/css3.svg" alt="" loading="lazy"><span>CSS3</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/javascript.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/bootstrap.svg" alt="" loading="lazy"><span>Bootstrap</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/fastapi.svg" alt="" loading="lazy"><span>FastAPI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencv.svg" alt="" loading="lazy"><span>OpenCV</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/sqlite.svg" alt="" loading="lazy"><span>SQLite</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/pandas.svg" alt="" loading="lazy"><span>Pandas</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/n8n.svg" alt="" loading="lazy"><span>n8n</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/linux.svg" alt="" loading="lazy"><span>Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/github.svg" alt="" loading="lazy"><span>GitHub</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/git.svg" alt="" loading="lazy"><span>Git</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/virustotal.svg" alt="" loading="lazy"><span>VirusTotal</span></div>
+                    <!-- Duplicado para loop continuo -->
+                    <div class="tech-marquee-item"><img src="img/tech/python.svg" alt="" loading="lazy"><span>Python</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/go.svg" alt="" loading="lazy"><span>Go</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/docker.svg" alt="" loading="lazy"><span>Docker</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/nextjs.svg" alt="" loading="lazy"><span>Next.js</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/react.svg" alt="" loading="lazy"><span>React</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/tailwindcss.svg" alt="" loading="lazy"><span>Tailwind CSS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/html5.svg" alt="" loading="lazy"><span>HTML5</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/css3.svg" alt="" loading="lazy"><span>CSS3</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/javascript.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/bootstrap.svg" alt="" loading="lazy"><span>Bootstrap</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/fastapi.svg" alt="" loading="lazy"><span>FastAPI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencv.svg" alt="" loading="lazy"><span>OpenCV</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/sqlite.svg" alt="" loading="lazy"><span>SQLite</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/pandas.svg" alt="" loading="lazy"><span>Pandas</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/n8n.svg" alt="" loading="lazy"><span>n8n</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/linux.svg" alt="" loading="lazy"><span>Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/github.svg" alt="" loading="lazy"><span>GitHub</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/git.svg" alt="" loading="lazy"><span>Git</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/virustotal.svg" alt="" loading="lazy"><span>VirusTotal</span></div>
+                </div>
+            </div>
+
+            <div class="projects-list">
+                <!-- Nafta y GNC Argentina -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>Nafta y GNC Argentina</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Solución autónoma para la consulta inteligente de precios de combustibles y optimización de rendimiento vehicular en tiempo real."</span>
+                            <span class="lang-en">"Autonomous solution for smart fuel price querying and real-time vehicle performance optimization."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Inteligencia de Datos:</strong> Visualización de precios actualizados de Nafta y GNC en todo el territorio argentino.</span>
+                                <span class="lang-en"><strong>Data Intelligence:</strong> Visualization of updated Fuel and GNC prices across all Argentine territory.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Calculadora de Rendimiento:</strong> Herramienta avanzada para proyectar el alcance del vehículo según presupuesto, marca, modelo y motor.</span>
+                                <span class="lang-en"><strong>Performance Calculator:</strong> Advanced tool to project vehicle range based on budget, make, model, and engine.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Ecosistema Geolocalizado:</strong> Vinculación dinámica de la ubicación del usuario con estaciones de servicio cercanas y sus tarifas vigentes.</span>
+                                <span class="lang-en"><strong>Geolocated Ecosystem:</strong> Dynamic linking of user location with nearby service stations and their current rates.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🛠️ Arquitectura & Desarrollo</span>
+                                <span class="lang-en">🛠️ Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Automatización de Datos:</strong> Desarrollo de una API propietaria orquestada mediante <strong>Python:</strong> Realiza scraping y descarga continua de fuentes gubernamentales públicas para garantizar la veracidad de la información.</span>
+                                <span class="lang-en"><strong>Data Automation:</strong> Development of a proprietary API orchestrated via <strong>Python:</strong> Performs continuous scraping and downloading of public government sources to ensure information accuracy.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://nafta.brexum.ar/" target="_blank" data-preview-url="https://nafta.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://nafta.brexum.ar/" data-preview-name="Nafta y GNC Argentina"></div>
+                    </div>
+                </article>
+
+                <!-- GenPass -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>GenPass - Pass Generator</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Herramienta avanzada para la generación de contraseñas seguras basada en algoritmos de entropía, diseñada para maximizar la robustez y prevenir ataques de fuerza bruta."</span>
+                            <span class="lang-en">"Advanced tool for secure password generation based on entropy algorithms, designed to maximize robustness and prevent brute force attacks."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Generación basada en Entropía:</strong> Implementación de algoritmos que garantizan la aleatoriedad y complejidad necesaria para contraseñas de alta seguridad.</span>
+                                <span class="lang-en"><strong>Entropy-based Generation:</strong> Implementation of algorithms that guarantee the randomness and complexity required for high-security passwords.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Verificación de Robustez:</strong> Análisis en tiempo real de la fortaleza de la contraseña generada o ingresada por el usuario.</span>
+                                <span class="lang-en"><strong>Strength Verification:</strong> Real-time analysis of the generated or user-input password strength.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Interfaz de Alta Fidelidad:</strong> Diseño minimalista y funcional enfocado en la usabilidad y la seguridad del usuario.</span>
+                                <span class="lang-en"><strong>High-Fidelity Interface:</strong> Minimalist and functional design focused on usability and user security.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🛠️ Arquitectura & Desarrollo</span>
+                                <span class="lang-en">🛠️ Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Seguridad Local:</strong> Desarrollado bajo el ecosistema de <strong>Next.js</strong><br> <strong>Tailwind CSS:</strong> Utiliza bibliotecas criptográficas de vanguardia para asegurar que los secretos nunca salgan del entorno local del navegador.</span>
+                                <span class="lang-en"><strong>Local Security:</strong> Developed under the <strong>Next.js</strong> ecosystem<br> <strong>Tailwind CSS:</strong> Utilizes cutting-edge cryptographic libraries to ensure secrets never leave the local browser environment.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">
+                                <span class="lang-es">Ciberseguridad</span>
+                                <span class="lang-en">Cybersecurity</span>
+                            </span>
+                            <span class="tag">Cryptography</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://genpass.brexum.ar/" target="_blank" data-preview-url="https://genpass.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://genpass.brexum.ar/" data-preview-name="GenPass"></div>
+                    </div>
+                </article>
+
+                <!-- Precio Súper -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>Precio Súper</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Comparador de precios de supermercados en Argentina que centraliza y actualiza en tiempo real la oferta de las principales cadenas del país."</span>
+                            <span class="lang-en">"Supermarket price comparator for Argentina that centralizes and updates the offerings of the country's main retail chains in real time."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Motor de Scraping en Go:</strong> API propia desarrollada en Go que recolecta y normaliza precios de múltiples cadenas (Día, Jumbo, Disco, Carrefour, Coto, Vea, Farmacity, Mas Online) de forma concurrente y resiliente ante fallos parciales.</span>
+                                <span class="lang-en"><strong>Go Scraping Engine:</strong> Custom API built in Go that concurrently collects and normalizes prices from multiple retail chains (Día, Jumbo, Disco, Carrefour, Coto, Vea, Farmacity, Mas Online), resilient to partial scraper failures.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Buscador y Filtros por Categoría:</strong> Búsqueda de productos en tiempo real con filtrado por categorías (almacén, bebidas, frescos, golosinas, limpieza) sobre datos unificados de todas las fuentes.</span>
+                                <span class="lang-en"><strong>Search & Category Filters:</strong> Real-time product search with category filtering (pantry, beverages, fresh, snacks, cleaning) over unified data from all sources.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Carrito Inteligente:</strong> Carrito de compras con persistencia local y exportación a Excel/CSV para comparar precios entre supermercados antes de comprar.</span>
+                                <span class="lang-en"><strong>Smart Cart:</strong> Shopping cart with local persistence and Excel/CSV export to compare prices across supermarkets before purchasing.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🛠️ Arquitectura & Desarrollo</span>
+                                <span class="lang-en">🛠️ Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Backend Desacoplado:</strong> API REST en <strong>Go</strong> desplegada de forma independiente del frontend estático, con hardening de cabeceras de seguridad (CSP, HSTS, Anti-Clickjacking, X-Content-Type-Options) vía .htaccess.</span>
+                                <span class="lang-en"><strong>Decoupled Backend:</strong> REST API in <strong>Go</strong> deployed independently from the static frontend, with security header hardening (CSP, HSTS, Anti-Clickjacking, X-Content-Type-Options) via .htaccess.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Go (Golang)</span>
+                            <span class="tag">Web Scraping</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Bootstrap 5</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://preciosuper.brexum.ar/" target="_blank" data-preview-url="https://preciosuper.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://preciosuper.brexum.ar/" data-preview-name="Precio Súper"></div>
+                    </div>
+                </article>
+
+                <!-- CamRecon -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>CamRecon</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Sistema de reconocimiento facial conectado a cámaras IP (RTSP) que identifica personas y traza automáticamente su recorrido por zonas, con registro de entrada, salida y permanencia."</span>
+                            <span class="lang-en">"Facial recognition system connected to IP cameras (RTSP) that identifies people and automatically traces their movement across zones, logging entry, exit, and dwell time."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Reconocimiento Facial Multi-Cámara:</strong> Conexión a cámaras IP/DVR/NVR vía RTSP con reconocimiento facial (face_recognition/dlib) y soporte multi-foto por perfil de empleado.</span>
+                                <span class="lang-en"><strong>Multi-Camera Facial Recognition:</strong> Connection to IP/DVR/NVR cameras via RTSP with facial recognition (face_recognition/dlib) and multi-photo support per employee profile.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Tracking de Recorrido por Zonas:</strong> Asignación de cámaras a áreas configurables y registro automático de sesiones con entrada, salida y duración en formato HH:MM:SS.</span>
+                                <span class="lang-en"><strong>Zone-based Tracking:</strong> Assignment of cameras to configurable areas and automatic session logging with entry, exit, and duration in HH:MM:SS format.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Panel de Administración:</strong> Gestión de empleados, vista en vivo, asistente guiado de vinculación de cámaras y reportes de recorrido descargables por empleado.</span>
+                                <span class="lang-en"><strong>Admin Panel:</strong> Employee management, live view, guided camera-linking wizard, and downloadable per-employee movement reports.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es">🛠️ Arquitectura & Desarrollo</span>
+                                <span class="lang-en">🛠️ Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Visión por Computadora:</strong> Backend en <strong>Python</strong> con <strong>FastAPI</strong>, <strong>OpenCV</strong> y SQLite, empaquetado con <strong>Docker/Docker Compose</strong> para despliegue en VPS. Frontend en JS vainilla con Tailwind CSS.</span>
+                                <span class="lang-en"><strong>Computer Vision:</strong> Backend in <strong>Python</strong> with <strong>FastAPI</strong>, <strong>OpenCV</strong>, and SQLite, packaged with <strong>Docker/Docker Compose</strong> for VPS deployment. Vanilla JS frontend with Tailwind CSS.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">
+                                <span class="lang-es">Visión por Computadora</span>
+                                <span class="lang-en">Computer Vision</span>
+                            </span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://github.com/luisafricano/CamRecon.git" target="_blank" data-preview-url="https://github.com/luisafricano/CamRecon" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i>
+                            <span class="lang-es">Ver en GitHub</span>
+                            <span class="lang-en">View on GitHub</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">Código Abierto</span>
+                            <span class="lang-en">Open Source</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://github.com/luisafricano/CamRecon" data-preview-name="CamRecon"></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="section-header" id="certificaciones">
+                <h2 class="section-title">
+                    <span class="lang-es">Certificaciones y Cursos</span>
+                    <span class="lang-en">Certifications & Courses</span>
+                </h2>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Linux Customization Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Personalización de Entorno Linux</span>
+                            <span class="lang-en">Linux Environment Customization</span>
+                        </h4>
+                        <span class="cert-issuer">Hack4u</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: oct. 2025</span>
+                                <span class="lang-en">Issued: Oct 2025</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">6356-9341-9535-2592</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://hack4u.io/certificate/6356-9341-9535-2592" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Javascript Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>JavaScript</h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: ene. 2023</span>
+                                <span class="lang-en">Issued: Jan 2023</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">654ec219088d9fcd682bdf52</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/654ec219088d9fcd682bdf52?lang"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Leadership Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Liderazgo y Gestión de Equipos</span>
+                            <span class="lang-en">Leadership & Team Management</span>
+                        </h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: ene. 2024</span>
+                                <span class="lang-en">Issued: Jan 2024</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">662625038560aa2dd7622bea</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/662625038560aa2dd7622bea?lang"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Web Dev Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Desarrollador Web</span>
+                            <span class="lang-en">Web Developer</span>
+                        </h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: jun. 2023 · Vencimiento: jun. 2030</span>
+                                <span class="lang-en">Issued: Jun 2023 · Expires: Jun 2030</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">64b3313a3e4a1b0002d4de48</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/64b3313a3e4a1b0002d4de48?lang=es"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-links" style="gap: 1.5rem;">
+                <a href="#" class="btn btn-primary btn-sm btn-cv-trigger">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span class="lang-es">Descargar CV</span>
+                    <span class="lang-en">Download Resume</span>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm btn-contact-trigger">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span class="lang-es">Contacto</span>
+                    <span class="lang-en">Contact</span>
+                </a>
+            </div>
+            <p class="copyright">
+                <span class="lang-es">&copy; 2026 LUIS AFRICANO. Todos los derechos reservados.</span>
+                <span class="lang-en">&copy; 2026 LUIS AFRICANO. All rights reserved.</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Language Selection Logic
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                document.body.classList.remove('lang-es');
+                document.body.classList.add('lang-en');
+                document.title = "Luis Africano | Professional Profile";
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'Luis Africano - Professional Profile. Lead in Cybersecurity Incident Management and IT Support.');
+                }
+            } else {
+                document.body.classList.remove('lang-en');
+                document.body.classList.add('lang-es');
+                document.title = "Luis Africano | Perfil Profesional";
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'Luis Africano - Perfil Profesional. Responsable de la Gestión de Incidentes de Ciberseguridad y Soporte TI.');
+                }
+            }
+
+            // Update selector UI active class
+            document.querySelectorAll('.lang-selector .btn-lang').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(`'${lang}'`)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Save preference
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang') || 'es';
+            setLanguage(savedLang);
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            navLinks.querySelectorAll('.nav-link').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Scroll Spy: resalta el link de nav activo según la sección visible
+        const navLinkEls = document.querySelectorAll('.nav-link[data-section]');
+        const spySections = Array.from(navLinkEls)
+            .map((link) => document.getElementById(link.dataset.section))
+            .filter(Boolean);
+
+        if ('IntersectionObserver' in window && spySections.length) {
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        navLinkEls.forEach((link) => {
+                            link.classList.toggle('active', link.dataset.section === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+            spySections.forEach((section) => spyObserver.observe(section));
+        }
+
+        // Scroll Reveal: fade/slide sutil al entrar en viewport (respeta prefers-reduced-motion vía CSS)
+        const revealTargets = document.querySelectorAll('.bento-item, .exp-card, .cert-card');
+        if ('IntersectionObserver' in window && revealTargets.length) {
+            revealTargets.forEach((el) => el.classList.add('reveal'));
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealTargets.forEach((el) => revealObserver.observe(el));
+        }
+
+        // Interactive Background Mesh: malla de nodos/líneas en canvas con
+        // rotación tipo "vórtice" ligada al scroll, drift orgánico continuo
+        // y repulsión por el mouse. Sin librerías nuevas (canvas 2D vanilla).
+        (function () {
+            const canvas = document.getElementById('bg-mesh');
+            if (!canvas || !canvas.getContext) return;
+
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+            const CYAN = '#00c8ff';
+            const TEAL = '#00B8A9';
+
+            function colorWithAlpha(hex, alpha) {
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
+                return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            }
+
+            let width = 0;
+            let height = 0;
+            let dpr = 1;
+            let nodes = [];
+            let scrollY = window.scrollY;
+            let mouseX = -9999;
+            let mouseY = -9999;
+            let rafId = null;
+
+            function createNodes() {
+                const docHeight = Math.max(document.body.scrollHeight, window.innerHeight);
+                const screens = Math.max(1, docHeight / height);
+                const perScreen = isMobile() ? 16 : 30;
+                const maxNodes = isMobile() ? 110 : 260;
+                const count = Math.min(Math.round(perScreen * screens), maxNodes);
+
+                nodes = Array.from({ length: count }, () => ({
+                    ox: Math.random() * width,
+                    oy: Math.random() * docHeight,
+                    layer: Math.floor(Math.random() * 3), // 0 = fondo, 2 = frente
+                    r: Math.random() * 1.8 + 1,
+                    phase: Math.random() * Math.PI * 2,
+                    speed: 0.6 + Math.random() * 0.8,
+                }));
+            }
+
+            function rotateAround(px, py, cx, cy, angle) {
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const dx = px - cx;
+                const dy = py - cy;
+                return { x: cx + dx * cos - dy * sin, y: cy + dx * sin + dy * cos };
+            }
+
+            function draw(time) {
+                ctx.clearRect(0, 0, width, height);
+
+                const mobile = isMobile();
+                const parallax = mobile ? [0.12, 0.22, 0.32] : [0.18, 0.45, 0.85];
+                const rotFactor = mobile ? [0, 0, 0] : [0.00025, -0.00045, 0.0007];
+                const driftAmp = mobile ? 6 : 16;
+                const threshold = mobile ? 130 : 190;
+                const pivot = { x: width / 2, y: height * 0.42 };
+                const mouseRadius = mobile ? 0 : 170;
+
+                const projected = nodes
+                    .map((n) => {
+                        const driftX = Math.sin(time * 0.00045 * n.speed + n.phase) * driftAmp;
+                        const driftY = Math.cos(time * 0.00038 * n.speed + n.phase * 1.4) * driftAmp;
+                        const baseY = n.oy - scrollY * parallax[n.layer];
+                        const angle = scrollY * rotFactor[n.layer];
+                        let p = rotateAround(n.ox + driftX, baseY + driftY, pivot.x, pivot.y, angle);
+
+                        if (mouseRadius > 0) {
+                            const dx = p.x - mouseX;
+                            const dy = p.y - mouseY;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < mouseRadius) {
+                                const force = (1 - dist / mouseRadius) * 30;
+                                const nx = dist === 0 ? 0 : dx / dist;
+                                const ny = dist === 0 ? 0 : dy / dist;
+                                p = { x: p.x + nx * force, y: p.y + ny * force };
+                            }
+                        }
+
+                        return { x: p.x, y: p.y, r: n.r, layer: n.layer };
+                    })
+                    .filter((n) => n.x > -60 && n.x < width + 60 && n.y > -60 && n.y < height + 60);
+
+                for (let i = 0; i < projected.length; i++) {
+                    for (let j = i + 1; j < projected.length; j++) {
+                        const a = projected[i];
+                        const b = projected[j];
+                        const dx = a.x - b.x;
+                        const dy = a.y - b.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < threshold) {
+                            ctx.strokeStyle = colorWithAlpha(a.layer === 2 ? CYAN : TEAL, (1 - dist / threshold) * 0.4);
+                            ctx.lineWidth = a.layer === 2 ? 1.2 : 0.8;
+                            ctx.beginPath();
+                            ctx.moveTo(a.x, a.y);
+                            ctx.lineTo(b.x, b.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                projected.forEach((n) => {
+                    const color = n.layer === 2 ? CYAN : TEAL;
+                    ctx.save();
+                    ctx.shadowColor = colorWithAlpha(color, 0.9);
+                    ctx.shadowBlur = n.layer === 2 ? 10 : 5;
+                    ctx.fillStyle = colorWithAlpha(color, 0.85);
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.r * (n.layer + 1) * 0.7, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                });
+            }
+
+            function loop(time) {
+                draw(time);
+                rafId = requestAnimationFrame(loop);
+            }
+
+            function startLoop() {
+                if (rafId !== null) return;
+                rafId = requestAnimationFrame(loop);
+            }
+
+            function stopLoop() {
+                if (rafId === null) return;
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+
+            function resize() {
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                createNodes();
+                draw(performance.now());
+            }
+
+            function onScroll() {
+                scrollY = window.scrollY;
+            }
+
+            function onMouseMove(e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            }
+
+            function onMouseLeave() {
+                mouseX = -9999;
+                mouseY = -9999;
+            }
+
+            function onVisibilityChange() {
+                if (reduceMotion) return;
+                if (document.visibilityState === 'visible') startLoop();
+                else stopLoop();
+            }
+
+            let resizeTimer;
+            function onResize() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resize, 150);
+            }
+
+            resize();
+            window.addEventListener('load', resize);
+            window.addEventListener('resize', onResize);
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (!reduceMotion) {
+                window.addEventListener('mousemove', onMouseMove, { passive: true });
+                window.addEventListener('mouseleave', onMouseLeave);
+                document.addEventListener('visibilitychange', onVisibilityChange);
+                startLoop();
+            }
+        })();
+
+        // Timeline: línea de progreso coloreada + años/dots activos en "Trayectoria Profesional"
+        (function () {
+            const track = document.querySelector('.timeline-track');
+            const progressBar = document.getElementById('timeline-progress');
+            const markersContainer = document.getElementById('timeline-markers');
+            if (!track || !progressBar || !markersContainer) return;
+
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+            // El dot siempre vive en el overlay absoluto (#timeline-markers), sobre la
+            // línea. En mobile el año se saca del overlay y se inserta en flujo normal,
+            // como una fila propia justo antes de su tarjeta (alineada a la izquierda,
+            // pegada al dot) para no robarle ancho a la tarjeta.
+            const cards = Array.from(track.querySelectorAll('.exp-card'));
+            const markers = cards.map((card) => {
+                const dot = card.querySelector('.timeline-dot');
+                const year = card.querySelector('.timeline-year');
+                if (dot) markersContainer.appendChild(dot);
+                if (year) markersContainer.appendChild(year);
+                return { card, dot, year };
+            });
+
+            let mobileLayout = null;
+            function layoutYears() {
+                const mobile = isMobile();
+                if (mobile === mobileLayout) return;
+                mobileLayout = mobile;
+
+                markers.forEach(({ card, year }) => {
+                    if (!year) return;
+                    if (mobile) {
+                        year.classList.add('timeline-year--inline');
+                        year.style.top = '';
+                        if (year.nextElementSibling !== card || year.parentElement !== card.parentElement) {
+                            card.parentElement.insertBefore(year, card);
+                        }
+                    } else {
+                        year.classList.remove('timeline-year--inline');
+                        if (year.parentElement !== markersContainer) {
+                            markersContainer.appendChild(year);
+                        }
+                    }
+                });
+            }
+
+            function positionMarkers() {
+                layoutYears();
+                const trackRect = track.getBoundingClientRect();
+                markers.forEach(({ card, dot, year }) => {
+                    if (!dot) return;
+                    if (mobileLayout && year) {
+                        // El año vive en flujo normal (antes de su tarjeta); el dot se
+                        // alinea verticalmente al centro del propio texto del año.
+                        const yearRect = year.getBoundingClientRect();
+                        dot.style.top = (yearRect.top - trackRect.top + yearRect.height / 2 - 7) + 'px';
+                    } else {
+                        // Desktop: dot y año se alinean juntos con el borde superior de la tarjeta.
+                        const cardRect = card.getBoundingClientRect();
+                        const top = (cardRect.top - trackRect.top + 32) + 'px';
+                        dot.style.top = top;
+                        if (year) year.style.top = top;
+                    }
+                });
+            }
+
+            let resizeTimer;
+            function onMarkersResize() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(positionMarkers, 120);
+            }
+
+            positionMarkers();
+            window.addEventListener('load', positionMarkers);
+            window.addEventListener('resize', onMarkersResize);
+
+            // La línea de progreso y la activación de cada dot/año usan la MISMA
+            // referencia (el punto medio del viewport) para que el dot se encienda
+            // exactamente cuando la línea llena lo alcanza, sin desfasajes.
+            let ticking = false;
+
+            function updateOnScroll() {
+                ticking = false;
+                const trackRect = track.getBoundingClientRect();
+                const viewportMid = window.innerHeight * 0.5;
+                const sectionHeight = trackRect.height;
+                const progress = Math.min(Math.max((viewportMid - trackRect.top) / sectionHeight, 0), 1);
+                progressBar.style.transform = `scaleY(${progress})`;
+
+                markers.forEach(({ dot, year }) => {
+                    if (!dot) return;
+                    const dotRect = dot.getBoundingClientRect();
+                    const dotMid = dotRect.top + dotRect.height / 2;
+                    const active = dotMid <= viewportMid;
+                    if (active) {
+                        dot.classList.add('is-active');
+                        if (year) year.classList.add('is-active');
+                    } else if (!reduceMotion) {
+                        dot.classList.remove('is-active');
+                        if (year) year.classList.remove('is-active');
+                    }
+                });
+            }
+
+            function onScroll() {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(updateOnScroll);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            updateOnScroll();
+        })();
+
+        // Link Preview: captura (Microlink) fija dentro de la tarjeta, debajo del estado del proyecto
+        (function () {
+            const links = document.querySelectorAll('a[data-preview-url]');
+            if (!links.length) return;
+
+            const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (!canHover) return;
+
+            const cache = new Map();
+
+            links.forEach((link) => {
+                const url = link.getAttribute('data-preview-url');
+                const slot = link.closest('.exp-sidebar')?.querySelector('.link-preview-slot');
+                if (!slot) return;
+
+                const name = slot.getAttribute('data-preview-name') || '';
+                const img = document.createElement('img');
+                const label = document.createElement('div');
+                label.className = 'link-preview-label';
+                label.textContent = name;
+                slot.appendChild(img);
+                slot.appendChild(label);
+
+                let loaded = false;
+
+                function loadPreview() {
+                    if (loaded) return;
+                    loaded = true;
+                    if (cache.has(url)) {
+                        img.src = cache.get(url);
+                        img.classList.add('is-loaded');
+                        label.style.display = 'none';
+                        return;
+                    }
+                    const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`;
+                    img.onload = () => {
+                        img.classList.add('is-loaded');
+                        label.style.display = 'none';
+                        cache.set(url, screenshotUrl);
+                    };
+                    img.onerror = () => {
+                        loaded = false;
+                        img.removeAttribute('src');
+                    };
+                    img.src = screenshotUrl;
+                }
+
+                link.addEventListener('mouseenter', () => {
+                    slot.classList.add('is-visible');
+                    loadPreview();
+                });
+
+                link.addEventListener('mouseleave', () => {
+                    slot.classList.remove('is-visible');
+                });
+            });
+        })();
+
+        // Download CV Logic
+        document.querySelectorAll('.btn-cv-trigger').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const isEn = document.body.classList.contains('lang-en');
+
+                // Multilingual texts for download modals
+                const modalTitle = isEn ? 'Starting Download' : 'Iniciando Descarga';
+                const modalHtml = isEn ? 'Preparing <b>Luis Africano</b>\'s resume...' : 'Preparando el currículum de <b>Luis Africano</b>...';
+                
+                const successTitle = isEn ? 'CV Downloaded!' : '¡CV Descargado!';
+                const successText = isEn ? 'The file has been successfully saved to your device.' : 'El archivo se ha guardado correctamente en tu dispositivo.';
+
+                Swal.fire({
+                    title: modalTitle,
+                    html: modalHtml,
+                    timer: 2500,
+                    timerProgressBar: true,
+                    background: '#000000',
+                    color: '#00c8ff',
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    customClass: {
+                        popup: 'swal-animated-modal',
+                        title: 'swal-text-cyan',
+                        htmlContainer: 'swal-text-white'
+                    },
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                }).then((result) => {
+                    if (result.isDismissed || result.isConfirmed) {
+                        setTimeout(() => {
+                            // Trigger actual download
+                            const link = document.createElement('a');
+                            if (isEn) {
+                                link.href = 'CV/Luis Africano Resume 2026.pdf';
+                                link.download = 'Luis Africano Resume 2026.pdf';
+                            } else {
+                                link.href = 'CV/CV Luis Africano 2026.pdf';
+                                link.download = 'CV Luis Africano 2026.pdf';
+                            }
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+
+                            // Success Message
+                            Swal.fire({
+                                icon: 'success',
+                                title: successTitle,
+                                text: successText,
+                                background: '#000000',
+                                color: '#00c8ff',
+                                confirmButtonColor: '#00B8A9',
+                                iconColor: '#00c8ff',
+                                customClass: {
+                                    popup: 'swal-animated-modal',
+                                    title: 'swal-text-cyan',
+                                    htmlContainer: 'swal-text-white'
+                                }
+                            });
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Contact Modal Logic
+        document.querySelectorAll('.btn-contact-trigger').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const isEn = document.body.classList.contains('lang-en');
+
+                const modalTitle = isEn ? 'Contact Channels' : 'Canales de Contacto';
+                
+                const emailTitle = isEn ? 'By Email' : 'Por Correo';
+                const copyEmailBtn = isEn ? 'Copy e-mail' : 'Copiar e-mail';
+                const sendEmailBtn = isEn ? 'Send e-mail' : 'Enviar e-mail';
+                const copyEmailSuccess = isEn ? 'Email copied' : 'Correo copiado';
+
+                const whatsappTitle = isEn ? 'By WhatsApp' : 'Por WhatsApp';
+                const sendWhatsappBtn = isEn ? 'Send Message' : 'Enviar Mensaje';
+
+                const callTitle = isEn ? 'By Phone Call' : 'Por Llamada';
+                const copyNumberBtn = isEn ? 'Copy Number' : 'Copiar Número';
+                const callNowBtn = isEn ? 'Call Now' : 'Llamar Ahora';
+                const copyNumberSuccess = isEn ? 'Number copied' : 'Número copiado';
+
+                Swal.fire({
+                    title: modalTitle,
+                    html: `
+                    <div class="contact-modal-options">
+                        <div class="contact-method">
+                            <h3><i class="fa-solid fa-envelope"></i> ${emailTitle}</h3>
+                            <p onclick="copyText('intertronick.arg@gmail.com', '${copyEmailSuccess}')" title="${isEn ? 'Click to copy' : 'Click para copiar'}">intertronick.arg@gmail.com</p>
+                            <div class="contact-btns">
+                                <button onclick="copyText('intertronick.arg@gmail.com', '${copyEmailSuccess}')" class="swal-btn">
+                                    <i class="fa-regular fa-copy"></i> ${copyEmailBtn}
+                                </button>
+                                <a href="mailto:intertronick.arg@gmail.com" class="swal-btn">
+                                    <i class="fa-solid fa-paper-plane"></i> ${sendEmailBtn}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <h3><i class="fa-brands fa-whatsapp"></i> ${whatsappTitle}</h3>
+                            <div class="contact-btns">
+                                <a href="https://api.whatsapp.com/send/?phone=543516769103&text&type=phone_number&app_absent=0" target="_blank" class="swal-btn">
+                                    <i class="fa-brands fa-whatsapp"></i> ${sendWhatsappBtn}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <h3><i class="fa-solid fa-phone"></i> ${callTitle}</h3>
+                            <p onclick="copyText('+543516769103', '${copyNumberSuccess}')" title="${isEn ? 'Click to copy' : 'Click para copiar'}">+543516769103</p>
+                            <div class="contact-btns">
+                                <button onclick="copyText('+543516769103', '${copyNumberSuccess}')" class="swal-btn">
+                                    <i class="fa-regular fa-copy"></i> ${copyNumberBtn}
+                                </button>
+                                <a href="tel:+543516769103" class="swal-btn">
+                                    <i class="fa-solid fa-phone"></i> ${callNowBtn}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                    background: '#000000',
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                    customClass: {
+                        popup: 'swal-animated-modal',
+                        title: 'swal-text-cyan'
+                    }
+                });
+            });
+        });
+
+        // Copy helper function
+        window.copyText = function (text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: message,
+                    background: '#000000',
+                    color: '#00c8ff',
+                    timer: 1500,
+                    showConfirmButton: false,
+                    customClass: {
+                        popup: 'swal-animated-modal'
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

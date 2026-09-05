@@ -1,0 +1,3067 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="slate">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <title>Luis Africano | Perfil Profesional</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Perfil profesional de Luis Africano, Ingeniero en Sistemas experto en Ciberseguridad, Automatización con IA e Infraestructura IT.">
+    <meta name="keywords"
+        content="Luis Africano, Ciberseguridad, Cybersecurity, Threat Intelligence, Automation, n8n, Python, Systems Engineer">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="img/favicon.webp">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="lang-es">
+    <!-- Boot Screen: pantalla negra estilo BIOS clásica que se muestra
+         brevemente antes del contenido de la web, sin llegar a mostrar
+         ningún logo, sólo el "código" de arranque -->
+    <div id="boot-screen" aria-hidden="true">
+        <div class="boot-main">
+            <div class="boot-lines" id="boot-lines"></div>
+            <div class="boot-ascii" id="boot-ascii"></div>
+        </div>
+    </div>
+    <noscript>
+        <style>
+            #boot-screen {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        (function () {
+            var overlay = document.getElementById('boot-screen');
+            var linesEl = document.getElementById('boot-lines');
+            var asciiEl = document.getElementById('boot-ascii');
+            if (!overlay || !linesEl) return;
+
+            var timerInterval = null;
+            var isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+            // Duración real del glitch+fade de salida definida en el CSS
+            // (@keyframes boot-glitch-out / boot-glitch-out-desktop). Se
+            // usa un setTimeout con este mismo valor para sacar el overlay
+            // del DOM, en vez de esperar el evento "transitionend": cuando
+            // una animación y una transition tocan la misma propiedad
+            // (opacity) a la vez, el transitionend puede disparar mucho
+            // antes de lo esperado y cortaba el glitch casi de inmediato.
+            var OUTRO_DURATION = isMobile ? 1100 : 500;
+
+            function hide(instant) {
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+                overlay.classList.add('is-hidden');
+                setTimeout(function () {
+                    if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+                }, instant ? 0 : OUTRO_DURATION);
+            }
+
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduceMotion) {
+                hide(true);
+                return;
+            }
+
+            // El texto arranca arriba a la izquierda y ocupa todo el ancho
+            // tanto en desktop como en mobile; los comandos son largos para
+            // que, al hacer wrap, llenen el viewport por completo. En
+            // desktop el "Press DEL..." final vive en la barra de estado
+            // fija de abajo, así que sólo se agrega acá en mobile.
+            var BOOT_LINES = [
+                { text: 'LuisAfricano-BIOS v6.00PG, Cybersecurity & Automation Systems Rev 2026' },
+                { text: 'Copyright (C) 2016-2026, LA Technologies, LTD — All Rights Reserved', cls: 'muted' },
+                { text: '' },
+                { text: 'Main Processor : Threat-Response Core i9 @ 5.2GHz, 24 Cores Detected' },
+                { text: 'Memory Testing : 1048576K OK, ECC Verification Passed Successfully' },
+                { text: '' },
+                { text: 'Memory Frequency is at 3200 MHz, Dual Channel Mode Interleaved Active' },
+                { text: '  Primary Master   : SSD NVMe  PORTFOLIO-01  Firmware Rev 4.2.0 OK', cls: 'muted' },
+                { text: '  Primary Slave    : SSD NVMe  PROJECTS-02   Firmware Rev 4.2.0 OK', cls: 'muted' },
+                { text: '  Secondary Master : DVD-ROM   SKILLS-03     ATAPI Model Rev 1.33', cls: 'muted' },
+                { text: '  Secondary Slave  : CF/ATA    EXPERIENCE-04 Model Rev 04/05/06', cls: 'muted' },
+                { text: '' },
+                { text: 'Award Plug and Play BIOS Extension v1.0A, Initializing Resources', cls: 'muted' },
+                { text: 'Initializing Plug and Play Cards ... Scanning ISA/PCI Bus Devices' },
+                { text: 'PCI device listing ... Enumerating Bridges and Controllers Found', cls: 'muted' },
+                { text: '  Bus 0 Dev 1 Func 0  Vendor 8086 Device 2E30  Bridge   IRQ --', cls: 'muted' },
+                { text: '  Bus 0 Dev 2 Func 0  Vendor 10DE Device 0402  Display  IRQ 16', cls: 'muted' },
+                { text: '' },
+                { text: 'Auto-Detecting USB Mass Storage Devices ... Please Wait a Moment', cls: 'accent' },
+                { text: 'USB Device(s): 1 Keyboard, 2 Hubs, 1 Mass Storage Controller Found', cls: 'accent' },
+                { text: 'Detecting IDE drives ... Scanning Primary and Secondary Channels', cls: 'accent' },
+                { text: 'Initializing USB Controllers .. Done, Legacy Support Enabled', cls: 'accent' },
+                { text: 'Verifying DMI Pool Data ........ Checksum Verified Successfully', cls: 'accent' },
+                { text: '' },
+                { text: 'Boot from CD/DVD : Disabled — Network Boot Priority Configured', cls: 'muted' },
+                { text: 'Boot from LAN    : Disabled — Local Storage Priority Set First', cls: 'muted' },
+                { text: 'Loading Operating System ... Reading Master Boot Record Sector', cls: '' },
+            ];
+
+            if (isMobile) {
+                BOOT_LINES = BOOT_LINES.concat([
+                    { text: '' },
+                    { text: 'Press DEL to enter SETUP  ;  press ESC to skip diagnostics screen', cls: 'muted' },
+                ]);
+                overlay.classList.add('is-mobile');
+            }
+
+            var TOTAL_DURATION = 2500;
+            var HOLD = 420;
+            var STAGGER = (TOTAL_DURATION - HOLD) / BOOT_LINES.length;
+
+            BOOT_LINES.forEach(function (line, i) {
+                var div = document.createElement('div');
+                div.className = 'boot-line ' + (line.cls || '');
+                div.textContent = line.text || ' ';
+                div.style.transitionDelay = (i * STAGGER) + 'ms';
+                linesEl.appendChild(div);
+            });
+
+            var cursor = document.createElement('span');
+            cursor.className = 'boot-cursor';
+            linesEl.lastElementChild.appendChild(cursor);
+
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    linesEl.querySelectorAll('.boot-line').forEach(function (el) {
+                        el.classList.add('is-visible');
+                    });
+                });
+            });
+
+            // Logos viejos reales (sólo desktop): uno al azar por carga,
+            // con estilo de "monitor CRT viejo" (glow + scanlines).
+            var BOOT_LOGOS = [
+                { id: 'apple', img: 'img/tech/Macintosh.webp', caption: 'APPLE MACINTOSH' },
+                { id: 'windows', img: 'img/tech/windows.png', caption: 'MICROSOFT WINDOWS 3.1' },
+                { id: 'msdos', img: 'img/tech/msdos_open_source_microsoft.jpg', caption: 'MS-DOS' },
+                { id: 'linux', img: 'img/tech/linux.png', caption: 'LINUX' },
+                { id: 'energy', caption: 'ENERGY STAR COMPLIANT' }
+            ];
+
+            if (!isMobile && asciiEl) {
+                var chosenLogo = BOOT_LOGOS[Math.floor(Math.random() * BOOT_LOGOS.length)];
+                var art = document.createElement('div');
+                art.className = 'boot-ascii-art';
+
+                if (chosenLogo.id === 'energy') {
+                    art.classList.add('boot-ascii-energy');
+                    art.innerHTML =
+                        '<div class="energy-arc"></div>' +
+                        '<div class="energy-row"><span class="energy-script">Energy</span><span class="energy-star">&#9733;</span></div>' +
+                        '<div class="energy-line"></div>';
+                } else {
+                    var img = document.createElement('img');
+                    img.src = chosenLogo.img;
+                    img.alt = chosenLogo.caption;
+                    art.appendChild(img);
+                }
+
+                var caption = document.createElement('div');
+                caption.className = 'boot-ascii-caption';
+                caption.textContent = chosenLogo.caption;
+
+                asciiEl.appendChild(art);
+                asciiEl.appendChild(caption);
+            }
+
+            // Barra de estado fija abajo, sólo en desktop: nota + porcentaje
+            // + barra de progreso segmentada, como en un instalador clásico.
+            if (!isMobile) {
+                var statusBar = document.createElement('div');
+                statusBar.className = 'boot-status-bar';
+                statusBar.innerHTML =
+                    '<div class="boot-status-note">Press DEL to enter SETUP&nbsp;&nbsp;;&nbsp;&nbsp;press ESC to skip</div>' +
+                    '<div class="boot-status-row">' +
+                    '<span class="boot-status-percent">0% complete</span>' +
+                    '<div class="boot-progress"><div class="boot-progress-fill"></div></div>' +
+                    '</div>';
+                overlay.appendChild(statusBar);
+
+                var percentEl = statusBar.querySelector('.boot-status-percent');
+                var progressFill = statusBar.querySelector('.boot-progress-fill');
+                var startTime = performance.now();
+
+                timerInterval = setInterval(function () {
+                    var elapsed = performance.now() - startTime;
+                    var pct = Math.min(100, Math.round((elapsed / TOTAL_DURATION) * 100));
+                    percentEl.textContent = pct + '% complete';
+                }, 150);
+
+                requestAnimationFrame(function () {
+                    progressFill.style.transition = 'width ' + TOTAL_DURATION + 'ms linear';
+                    requestAnimationFrame(function () {
+                        progressFill.style.width = '100%';
+                    });
+                });
+            }
+
+            setTimeout(hide, TOTAL_DURATION);
+        })();
+    </script>
+
+    <canvas id="bg-mesh" aria-hidden="true"></canvas>
+
+    <!-- Sticky Navigation -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <div class="nav-inner">
+            <a href="#inicio" class="nav-brand">
+                    <img src="img/brexum-logo-header.webp" alt="" class="nav-brand-logo" width="66" height="51">
+                    <svg class="brand-name-svg" role="img" aria-label="Luis Africano"></svg>
+                    <span class="brand-name-fallback">Luis Africano</span>
+                </a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#inicio" class="nav-link" data-section="inicio">
+                    <span class="lang-es">Inicio</span>
+                    <span class="lang-en">Home</span>
+                </a>
+                <a href="#ecosistema" class="nav-link" data-section="ecosistema">
+                    <span class="lang-es">Ecosistema</span>
+                    <span class="lang-en">Ecosystem</span>
+                </a>
+                <a href="#trayectoria" class="nav-link" data-section="trayectoria">
+                    <span class="lang-es">Trayectoria</span>
+                    <span class="lang-en">Experience</span>
+                </a>
+                <a href="#proyectos" class="nav-link" data-section="proyectos">
+                    <span class="lang-es">Proyectos</span>
+                    <span class="lang-en">Projects</span>
+                </a>
+                <a href="#certificaciones" class="nav-link" data-section="certificaciones">
+                    <span class="lang-es">Certificaciones</span>
+                    <span class="lang-en">Certifications</span>
+                </a>
+                <!-- Selector de Idioma -->
+                <div class="lang-selector-wrapper">
+                    <div class="lang-selector">
+                        <button class="btn-lang active" id="btn-lang-es" onclick="setLanguage('es')">ES</button>
+                        <span class="lang-divider">/</span>
+                        <button class="btn-lang" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header id="inicio">
+            <div class="hero-card glass-card">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="lang-es">Disponible para Proyectos</span>
+                    <span class="lang-en">Available for Projects</span>
+                </div>
+                <h1>ING. LUIS AFRICANO</h1>
+                <p class="headline">
+                    <span class="lang-es">Ingeniero en Sistemas | IT Lead | Gerencia de TI y Ciberseguridad | Automatización de Procesos</span>
+                    <span class="lang-en">Systems Engineer | IT Lead | IT & Cybersecurity Management | Process Automation</span>
+                </p>
+                <p class="bio">
+                    <span class="lang-es">Ingeniero en Sistemas con amplia trayectoria liderando la gestión de infraestructura tecnológica, operaciones de ciberseguridad y automatización de procesos mediante Inteligencia Artificial. Experiencia demostrada en la coordinación de equipos técnicos, mitigación estratégica de riesgos, optimización de recursos y diseño de flujos de trabajo eficientes utilizando metodologías ágiles y Python. Capacidad probada para transformar la infraestructura de TI en un habilitador de negocio seguro, escalable y eficiente.</span>
+                    <span class="lang-en">Systems Engineer with an extensive career leading IT infrastructure management, cybersecurity operations, and process automation utilizing Artificial Intelligence. Proven experience coordinating technical teams, strategically mitigating risks, optimizing resources, and designing efficient workflows using agile methodologies and Python. Demonstrated ability to transform IT infrastructure into a secure, scalable, and efficient business enabler.</span>
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn btn-primary btn-cv-trigger">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        <span class="lang-es">Descargar CV</span>
+                        <span class="lang-en">Download Resume</span>
+                    </a>
+                    <a href="#" class="btn btn-outline btn-contact-trigger">
+                        <i class="fa-regular fa-circle-user" style="font-size: 1.2rem;"></i>
+                        <span class="lang-es">Contacto</span>
+                        <span class="lang-en">Contact</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Skills Bento Grid -->
+        <main>
+            <div class="section-header" id="ecosistema">
+                <h2 class="section-title">
+                    <span class="lang-es">Ecosistema Técnico</span>
+                    <span class="lang-en">Technical Ecosystem</span>
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Gestión y Liderazgo de TI Card -->
+                <div class="bento-item glass-card grid-gestion">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" width="20" height="8" rx="2" ry="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                <line x1="6" y1="4" x2="6" y2="4" />
+                                <line x1="6" y1="18" x2="6" y2="18" />
+                            </svg>
+                            <span class="lang-es">Gestión y Liderazgo de TI</span>
+                            <span class="lang-en">IT Management & Leadership</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Coordinación nacional de soporte, gestión de proveedores, administración de servidores (Windows/Linux) e infraestructura crítica.</span>
+                            <span class="lang-en">National support coordination, vendor management, server administration (Windows/Linux), and critical infrastructure.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Liderazgo de Equipos</span>
+                            <span class="lang-en">Team Leadership</span>
+                        </span>
+                        <span class="tag">
+                            <span class="lang-es">Gestión de Proveedores</span>
+                            <span class="lang-en">Vendor Management</span>
+                        </span>
+                        <span class="tag">SysAdmin Win/Linux</span>
+                        <span class="tag">
+                            <span class="lang-es">Infraestructura Crítica</span>
+                            <span class="lang-en">Critical Infrastructure</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Ciberseguridad Estratégica Card -->
+                <div class="bento-item glass-card grid-cyber">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span class="lang-es">Ciberseguridad Estratégica</span>
+                            <span class="lang-en">Strategic Cybersecurity</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Gestión de incidentes (SIEM), Threat Intelligence, marcos normativos y de seguridad (MITRE ATT&CK), y análisis forense.</span>
+                            <span class="lang-en">Incident management (SIEM), Threat Intelligence, regulatory & security frameworks (MITRE ATT&CK), and forensics.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Gestión de Incidentes (SIEM)</span>
+                            <span class="lang-en">Incident Management (SIEM)</span>
+                        </span>
+                        <span class="tag">Threat Intelligence</span>
+                        <span class="tag">MITRE ATT&CK</span>
+                        <span class="tag">
+                            <span class="lang-es">Análisis Forense</span>
+                            <span class="lang-en">Forensic Analysis</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Gobernanza y Automatización Card -->
+                <div class="bento-item glass-card grid-gobernanza">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                            <span class="lang-es">Gobernanza y Automatización</span>
+                            <span class="lang-en">Governance & Automation</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Optimización de procesos con IA, desarrollo de scripts (Python, requests, json, pandas), automatizaciones n8n y gestión de APIs.</span>
+                            <span class="lang-en">Process optimization with AI, script development (Python, requests, json, pandas), n8n automations, and API management.</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Go (Golang)</span>
+                        <span class="tag">
+                            <span class="lang-es">Automatización IA</span>
+                            <span class="lang-en">AI Automation</span>
+                        </span>
+                        <span class="tag">n8n</span>
+                        <span class="tag">
+                            <span class="lang-es">APIs & Integraciones</span>
+                            <span class="lang-en">APIs & Integrations</span>
+                        </span>
+                        <span class="tag">Pandas / JSON</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Redes y Proyectos Card -->
+                <div class="bento-item glass-card grid-redes">
+                    <div>
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="16" y="16" width="6" height="6" rx="1" />
+                                <rect x="2" y="16" width="6" height="6" rx="1" />
+                                <rect x="9" y="2" width="6" height="6" rx="1" />
+                                <path d="M12 8v8M5 16v-3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" />
+                            </svg>
+                            <span class="lang-es">Redes y Proyectos</span>
+                            <span class="lang-en">Networks & Projects</span>
+                        </h3>
+                        <p class="bento-desc">
+                            <span class="lang-es">Virtualización, optimización de VLANs corporativas, implementación de sistemas de tickets y metodologías ágiles (Scrum/Kanban).</span>
+                            <span class="lang-en">Virtualization, corporate VLAN optimization, ticketing system implementation, and agile methodologies (Scrum/Kanban).</span>
+                        </p>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">
+                            <span class="lang-es">Virtualización</span>
+                            <span class="lang-en">Virtualization</span>
+                        </span>
+                        <span class="tag">VLAN Optimization</span>
+                        <span class="tag">Ticketing Systems</span>
+                        <span class="tag">Scrum / Kanban</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section-header" id="trayectoria">
+                <h2 class="section-title">
+                    <span class="lang-es">Trayectoria Profesional</span>
+                    <span class="lang-en">Professional Experience</span>
+                </h2>
+            </div>
+
+            <div class="timeline-track">
+                <div class="timeline-progress" id="timeline-progress"></div>
+                <div class="timeline-markers" id="timeline-markers"></div>
+                <div class="experience-list">
+                <!-- Banesco -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2006</span><span class="ty-sep"> – </span><span class="ty-end">2012</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Analista Senior de Soporte TI</span>
+                            <span class="lang-en">Senior IT Support Analyst</span>
+                        </h4>
+                        <span class="exp-company">Banesco Banco Universal</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Ejercí la Coordinación Nacional de Soporte Técnico, liderando equipos multidisciplinarios desplegados en distintas regiones y reduciendo los tiempos globales de gestión operativa en un 25%.</span>
+                                <span class="lang-en">Served as National Technical Support Coordinator, leading multidisciplinary teams across different regions and reducing overall operational management times by 25%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Dirigí y planifiqué el proyecto de migración masiva de sistemas operativos a nivel nacional (Windows XP a Windows 7), logrando el cumplimiento de plazos con una significativa reducción de costos tecnológicos.</span>
+                                <span class="lang-en">Directed and planned the national operating system mass migration project (Windows XP to Windows 7), meeting deadlines with a significant reduction in technology costs.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-medal" aria-hidden="true"></i> Logros Clave</span>
+                                <span class="lang-en"><i class="fa-solid fa-medal" aria-hidden="true"></i> Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-60% Incidentes:</strong> Reducción masiva de fallas en servidores regionales.</span>
+                                    <span class="lang-en"><strong>-60% Incidents:</strong> Massive reduction in regional server failures.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Migración Eficiente:</strong> -45% tiempo y -20% costo en despliegue nacional Windows 7.</span>
+                                    <span class="lang-en"><strong>Efficient Migration:</strong> -45% time and -20% cost in national Windows 7 deployment.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Escalabilidad:</strong> Aumento del 40% en alcance de soporte metropolitano.</span>
+                                    <span class="lang-en"><strong>Scalability:</strong> 40% increase in metropolitan support coverage.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Julio 2006 – Octubre 2012</span>
+                            <span class="lang-en">July 2006 – October 2012</span>
+                        </div>
+                        <img src="img/banesco_banco_universal_logo.jpg" alt="Logo Banesco" class="company-logo">
+                    </div>
+                </article>
+                <!-- L'Oréal -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2012</span><span class="ty-sep"> – </span><span class="ty-end">2014</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Administrador de Infraestructura TI</span>
+                            <span class="lang-en">IT Infrastructure Administrator</span>
+                        </h4>
+                        <span class="exp-company">L'Oréal</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Administré la infraestructura tecnológica local, incluyendo servidores de datos, redes corporativas y plataformas de virtualización.</span>
+                                <span class="lang-en">Administered local technology infrastructure, including data servers, corporate networks, and virtualization platforms.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseñé y ejecuté el proyecto de optimización de VLANs corporativas, mejorando el rendimiento de la red, segmentando el tráfico y elevando los estándares de seguridad perimetral.</span>
+                                <span class="lang-en">Designed and executed the corporate VLAN optimization project, improving network performance, segmenting traffic, and raising perimeter security standards.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-medal" aria-hidden="true"></i> Logros Clave</span>
+                                <span class="lang-en"><i class="fa-solid fa-medal" aria-hidden="true"></i> Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>VLAN Optimization:</strong> Reingeniería de la segmentación de red.</span>
+                                    <span class="lang-en"><strong>VLAN Optimization:</strong> Re-engineering network segmentation.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Virtualización:</strong> Migración exitosa de servidores críticos.</span>
+                                    <span class="lang-en"><strong>Virtualization:</strong> Successful migration of critical servers.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Agosto 2012 – Octubre 2014</span>
+                            <span class="lang-en">August 2012 – October 2014</span>
+                        </div>
+                        <img src="img/loral_logo.jpg" alt="Logo L'Oréal" class="company-logo">
+                    </div>
+                </article>
+
+                <!-- ASG S.A. -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2018</span><span class="ty-sep"> – </span><span class="ty-end">2020</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de Soporte TI</span>
+                            <span class="lang-en">IT Support Lead</span>
+                        </h4>
+                        <span class="exp-company">ASG S.A. Asesoramiento de Sistemas de Gestión</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Gestioné de punta a punta la infraestructura de servidores corporativos (Windows/Linux) e estaciones de trabajo, asegurando la alta disponibilidad de los servicios de la compañía.</span>
+                                <span class="lang-en">Managed corporate server infrastructure (Windows/Linux) and workstations from end to end, ensuring high availability of company services.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Lideré la implementación del nuevo sistema de gestión de tickets para la mesa de ayuda, estandarizando los flujos de soporte y optimizando los tiempos de respuesta del área.</span>
+                                <span class="lang-en">Led the implementation of the new help desk ticketing system, standardizing support workflows and optimizing the department's response times.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Supervisé el desarrollo, administración y seguridad del sitio web corporativo.</span>
+                                <span class="lang-en">Supervised corporate website development, administration, and security.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-medal" aria-hidden="true"></i> Logros Clave</span>
+                                <span class="lang-en"><i class="fa-solid fa-medal" aria-hidden="true"></i> Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Ticketing System:</strong> Implementación de plataforma centralizada para soporte.</span>
+                                    <span class="lang-en"><strong>Ticketing System:</strong> Implementation of a centralized platform for support.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Digital Evolution:</strong> Modernización del sitio web y estrategias de E-mail Marketing.</span>
+                                    <span class="lang-en"><strong>Digital Evolution:</strong> Website modernization and Email Marketing strategies.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Marketing IT:</strong> Diseño y ejecución de campañas digitales de alto impacto.</span>
+                                    <span class="lang-en"><strong>Marketing IT:</strong> High-impact digital campaign design and execution.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Diciembre 2018 – Enero 2020</span>
+                            <span class="lang-en">December 2018 – January 2020</span>
+                        </div>
+                        <img src="img/asgconsultora_logo.jpg" alt="Logo ASG S.A." class="company-logo">
+                    </div>
+                </article>
+
+                <!-- Universidad Siglo 21 -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2020</span><span class="ty-sep"> – </span><span class="ty-end">2023</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de Línea (Cyberacademy, UCLAEH y APLV)</span>
+                            <span class="lang-en">Academic Line Manager (Cyberacademy, UCLAEH, and APLV)</span>
+                        </h4>
+                        <span class="exp-company">Universidad Siglo 21</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Coordiné y supervisé las líneas académicas y laboratorios tecnológicos especializados en Ciberseguridad, liderando equipos de tutores y gestionando la entrega de programas de alta especialización.</span>
+                                <span class="lang-en">Coordinated and supervised academic tracks and specialized technology laboratories in Cybersecurity, leading tutor teams and managing the delivery of highly specialized programs.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Dirigí proyectos de modernización de procesos internos mediante el desarrollo de herramientas de automatización en Python, consiguiendo una reducción del 75% en los tiempos de gestión y reportes.</span>
+                                <span class="lang-en">Directed internal process modernization projects by developing Python-based automation tools, achieving a 75% reduction in management and reporting times.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Implementé metodologías ágiles para la atención y resolución de requerimientos y consultas, logrando una mejora del 40% en los niveles de servicio (SLA) y satisfacción de los usuarios.</span>
+                                <span class="lang-en">Implemented agile methodologies for handling and resolving inquiries and requests, resulting in a 40% improvement in service level agreements (SLA) and user satisfaction.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-medal" aria-hidden="true"></i> Logros Clave</span>
+                                <span class="lang-en"><i class="fa-solid fa-medal" aria-hidden="true"></i> Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-75% Procesamiento:</strong> Automatización total de reportes y calificaciones.</span>
+                                    <span class="lang-en"><strong>-75% Processing:</strong> Complete automation of reports and grading systems.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-40% Respuesta:</strong> Optimización de la gestión de consultas bajo marcos ágiles.</span>
+                                    <span class="lang-en"><strong>-40% Response:</strong> Query management optimization under agile frameworks.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-30% OPEX:</strong> Reducción de costos mediante migración a plataformas OpenSource.</span>
+                                    <span class="lang-en"><strong>-30% OPEX:</strong> Cost reduction through migration to OpenSource platforms.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Enero 2020 – Diciembre 2023</span>
+                            <span class="lang-en">January 2020 – December 2023</span>
+                        </div>
+                        <img src="img/lasiglo21_logo.jpg" alt="Logo Universidad Siglo 21" class="company-logo">
+                    </div>
+                </article>
+
+                <!-- Banco de Córdoba -->
+                <article class="exp-card glass-card">
+                    <span class="timeline-year" aria-hidden="true"><span class="ty-start">2023</span><span class="ty-sep"> – </span><span class="ty-end">2025</span></span>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="exp-content">
+                        <h4>
+                            <span class="lang-es">Responsable de la Gestión de Incidentes de Ciberseguridad</span>
+                            <span class="lang-en">Cybersecurity Incident Management Lead</span>
+                        </h4>
+                        <span class="exp-company">Banco de Córdoba</span>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es">Lideré la estrategia de detección, monitoreo y resolución de incidentes de seguridad de la información corporativa mediante plataformas SIEM de escala global (QRadar y Microsoft Sentinel).</span>
+                                <span class="lang-en">Led the corporate information security incident detection, monitoring, and resolution strategy using global-scale SIEM platforms (QRadar and Microsoft Sentinel).</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseñé e implementé flujos de automatización basados en IA y Python para el procesamiento de alertas, logrando un incremento del 40% en la capacidad de detección de amenazas.</span>
+                                <span class="lang-en">Designed and implemented automation workflows based on AI and Python for alert processing, achieving a 40% increase in threat detection capability.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Optimicé el proceso de gobernanza e informes mediante la automatización de métricas clave, logrando una reducción del 50% en los tiempos de elaboración de reportes trimestrales para la alta dirección.</span>
+                                <span class="lang-en">Optimized the governance and reporting process through key metrics automation, reducing quarterly report generation times for senior executive management by 50%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Coordiné el mapeo estratégico de amenazas utilizando el marco MITRE ATT&CK y análisis avanzado de IoCs (VirusTotal/Maltego) para blindar la infraestructura crítica de la organización.</span>
+                                <span class="lang-en">Coordinated strategic threat mapping utilizing the MITRE ATT&CK framework and advanced IoC analysis (VirusTotal/Maltego) to secure the organization's critical infrastructure.</span>
+                            </li>
+                        </ul>
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-medal" aria-hidden="true"></i> Logros Clave</span>
+                                <span class="lang-en"><i class="fa-solid fa-medal" aria-hidden="true"></i> Key Achievements</span>
+                            </span>
+                            <div class="logros-grid">
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>Eficiencia Ágil:</strong> Implementación de metodologías ágiles para la distribución de tareas.</span>
+                                    <span class="lang-en"><strong>Agile Efficiency:</strong> Implementation of agile methodologies for task distribution.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-50% Tiempo:</strong> Reducción drástica en la creación y entrega de reportes técnicos.</span>
+                                    <span class="lang-en"><strong>-50% Time:</strong> Drastic reduction in technical report creation and delivery.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>-35% Costos:</strong> Optimización presupuestaria mediante automatización de tareas.</span>
+                                    <span class="lang-en"><strong>-35% Costs:</strong> Budget optimization through task automation.</span>
+                                </div>
+                                <div class="logro-card">
+                                    <span class="lang-es"><strong>+40% Detección:</strong> Mejora en visibilidad de amenazas mediante integración de IA.</span>
+                                    <span class="lang-en"><strong>+40% Detection:</strong> Enhanced threat visibility through AI integration.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <div class="exp-time">
+                            <span class="lang-es">Diciembre 2023 – Mayo 2025</span>
+                            <span class="lang-en">December 2023 – May 2025</span>
+                        </div>
+                        <img src="img/bancodecordoba_logo.jpg" alt="Logo Banco de Córdoba" class="company-logo">
+                    </div>
+                </article>
+
+                                </div>
+            </div>
+
+            <!-- Own Projects Section -->
+            <div class="section-header" id="proyectos">
+                <h2 class="section-title">
+                    <span class="lang-es">Proyectos Propios</span>
+                    <span class="lang-en">Personal Projects</span>
+                </h2>
+            </div>
+
+            <!-- Tech Marquee: logo cloud con todas las tecnologías/herramientas del perfil -->
+            <div class="tech-marquee" role="img" aria-label="Tecnologías, lenguajes, frameworks y herramientas: Python, Go, Docker, Next.js, React, Tailwind CSS, HTML5, CSS3, JavaScript, Bootstrap, FastAPI, OpenCV, SQLite, Pandas, n8n, Linux, GitHub, Git, VirusTotal, Anthropic, Claude, OpenCode, Gemini, Meta AI, GitHub Copilot, Mistral AI, DeepSeek, Perplexity, Evolution API, WhatsApp, Telegram, Angular, Visual Studio Code, Visual Studio, Microsoft, iOS, macOS, Android, Kali Linux, Ubuntu, Ubuntu Server, Debian, Parrot OS">
+                <div class="tech-marquee-track" aria-hidden="true">
+                    <div class="tech-marquee-item"><img src="img/tech/python.svg" alt="" loading="lazy"><span>Python</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/go.svg" alt="" loading="lazy"><span>Go</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/docker.svg" alt="" loading="lazy"><span>Docker</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/nextjs.svg" alt="" loading="lazy"><span>Next.js</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/react.svg" alt="" loading="lazy"><span>React</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/tailwindcss.svg" alt="" loading="lazy"><span>Tailwind CSS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/html5.svg" alt="" loading="lazy"><span>HTML5</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/css3.svg" alt="" loading="lazy"><span>CSS3</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/javascript.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/bootstrap.svg" alt="" loading="lazy"><span>Bootstrap</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/fastapi.svg" alt="" loading="lazy"><span>FastAPI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencv.svg" alt="" loading="lazy"><span>OpenCV</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/sqlite.svg" alt="" loading="lazy"><span>SQLite</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/pandas.svg" alt="" loading="lazy"><span>Pandas</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/n8n.svg" alt="" loading="lazy"><span>n8n</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/linux.svg" alt="" loading="lazy"><span>Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/github.svg" alt="" loading="lazy"><span>GitHub</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/git.svg" alt="" loading="lazy"><span>Git</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/virustotal.svg" alt="" loading="lazy"><span>VirusTotal</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/anthropic.svg" alt="" loading="lazy"><span>Anthropic</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/claude.svg" alt="" loading="lazy"><span>Claude</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencode.svg" alt="" loading="lazy"><span>OpenCode</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/gemini.svg" alt="" loading="lazy"><span>Gemini</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/metaai.svg" alt="" loading="lazy"><span>Meta AI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/githubcopilot.svg" alt="" loading="lazy"><span>GitHub Copilot</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/mistralai.svg" alt="" loading="lazy"><span>Mistral AI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/deepseek.svg" alt="" loading="lazy"><span>DeepSeek</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/perplexity.svg" alt="" loading="lazy"><span>Perplexity</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/evolutionapi.png" alt="" loading="lazy"><span>Evolution API</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/whatsapp.svg" alt="" loading="lazy"><span>WhatsApp</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/telegram.svg" alt="" loading="lazy"><span>Telegram</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/angular.svg" alt="" loading="lazy"><span>Angular</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/vscode.svg" alt="" loading="lazy"><span>VS Code</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/visualstudio.svg" alt="" loading="lazy"><span>Visual Studio</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/microsoft.svg" alt="" loading="lazy"><span>Microsoft</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ios.svg" alt="" loading="lazy"><span>iOS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/macos.svg" alt="" loading="lazy"><span>macOS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/android.svg" alt="" loading="lazy"><span>Android</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/kalilinux.svg" alt="" loading="lazy"><span>Kali Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ubuntu.svg" alt="" loading="lazy"><span>Ubuntu</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ubuntu.svg" alt="" loading="lazy"><span>Ubuntu Server</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/debian.svg" alt="" loading="lazy"><span>Debian</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/parrotos.svg" alt="" loading="lazy"><span>Parrot OS</span></div>
+                    <!-- Duplicado para loop continuo -->
+                    <div class="tech-marquee-item"><img src="img/tech/python.svg" alt="" loading="lazy"><span>Python</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/go.svg" alt="" loading="lazy"><span>Go</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/docker.svg" alt="" loading="lazy"><span>Docker</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/nextjs.svg" alt="" loading="lazy"><span>Next.js</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/react.svg" alt="" loading="lazy"><span>React</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/tailwindcss.svg" alt="" loading="lazy"><span>Tailwind CSS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/html5.svg" alt="" loading="lazy"><span>HTML5</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/css3.svg" alt="" loading="lazy"><span>CSS3</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/javascript.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/bootstrap.svg" alt="" loading="lazy"><span>Bootstrap</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/fastapi.svg" alt="" loading="lazy"><span>FastAPI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencv.svg" alt="" loading="lazy"><span>OpenCV</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/sqlite.svg" alt="" loading="lazy"><span>SQLite</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/pandas.svg" alt="" loading="lazy"><span>Pandas</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/n8n.svg" alt="" loading="lazy"><span>n8n</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/linux.svg" alt="" loading="lazy"><span>Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/github.svg" alt="" loading="lazy"><span>GitHub</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/git.svg" alt="" loading="lazy"><span>Git</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/virustotal.svg" alt="" loading="lazy"><span>VirusTotal</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/anthropic.svg" alt="" loading="lazy"><span>Anthropic</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/claude.svg" alt="" loading="lazy"><span>Claude</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/opencode.svg" alt="" loading="lazy"><span>OpenCode</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/gemini.svg" alt="" loading="lazy"><span>Gemini</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/metaai.svg" alt="" loading="lazy"><span>Meta AI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/githubcopilot.svg" alt="" loading="lazy"><span>GitHub Copilot</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/mistralai.svg" alt="" loading="lazy"><span>Mistral AI</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/deepseek.svg" alt="" loading="lazy"><span>DeepSeek</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/perplexity.svg" alt="" loading="lazy"><span>Perplexity</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/evolutionapi.png" alt="" loading="lazy"><span>Evolution API</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/whatsapp.svg" alt="" loading="lazy"><span>WhatsApp</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/telegram.svg" alt="" loading="lazy"><span>Telegram</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/angular.svg" alt="" loading="lazy"><span>Angular</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/vscode.svg" alt="" loading="lazy"><span>VS Code</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/visualstudio.svg" alt="" loading="lazy"><span>Visual Studio</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/microsoft.svg" alt="" loading="lazy"><span>Microsoft</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ios.svg" alt="" loading="lazy"><span>iOS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/macos.svg" alt="" loading="lazy"><span>macOS</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/android.svg" alt="" loading="lazy"><span>Android</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/kalilinux.svg" alt="" loading="lazy"><span>Kali Linux</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ubuntu.svg" alt="" loading="lazy"><span>Ubuntu</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/ubuntu.svg" alt="" loading="lazy"><span>Ubuntu Server</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/debian.svg" alt="" loading="lazy"><span>Debian</span></div>
+                    <div class="tech-marquee-item"><img src="img/tech/parrotos.svg" alt="" loading="lazy"><span>Parrot OS</span></div>
+                </div>
+            </div>
+
+            <div class="projects-list">
+                <!-- Nafta y GNC Argentina -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>Nafta y GNC Argentina</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Solución autónoma para la consulta inteligente de precios de combustibles y optimización de rendimiento vehicular en tiempo real."</span>
+                            <span class="lang-en">"Autonomous solution for smart fuel price querying and real-time vehicle performance optimization."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Inteligencia de Datos:</strong> Visualización de precios actualizados de Nafta y GNC en todo el territorio argentino.</span>
+                                <span class="lang-en"><strong>Data Intelligence:</strong> Visualization of updated Fuel and GNC prices across all Argentine territory.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Calculadora de Rendimiento:</strong> Herramienta avanzada para proyectar el alcance del vehículo según presupuesto, marca, modelo y motor.</span>
+                                <span class="lang-en"><strong>Performance Calculator:</strong> Advanced tool to project vehicle range based on budget, make, model, and engine.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Ecosistema Geolocalizado:</strong> Vinculación dinámica de la ubicación del usuario con estaciones de servicio cercanas y sus tarifas vigentes.</span>
+                                <span class="lang-en"><strong>Geolocated Ecosystem:</strong> Dynamic linking of user location with nearby service stations and their current rates.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Arquitectura & Desarrollo</span>
+                                <span class="lang-en"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Automatización de Datos:</strong> Desarrollo de una API propietaria orquestada mediante <strong>Python:</strong> Realiza scraping y descarga continua de fuentes gubernamentales públicas para garantizar la veracidad de la información.</span>
+                                <span class="lang-en"><strong>Data Automation:</strong> Development of a proprietary API orchestrated via <strong>Python:</strong> Performs continuous scraping and downloading of public government sources to ensure information accuracy.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://nafta.brexum.ar/" target="_blank" data-preview-url="https://nafta.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://nafta.brexum.ar/" data-preview-name="Nafta y GNC Argentina"></div>
+                    </div>
+                </article>
+
+                <!-- GenPass -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>GenPass - Pass Generator</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Herramienta avanzada para la generación de contraseñas seguras basada en algoritmos de entropía, diseñada para maximizar la robustez y prevenir ataques de fuerza bruta."</span>
+                            <span class="lang-en">"Advanced tool for secure password generation based on entropy algorithms, designed to maximize robustness and prevent brute force attacks."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Generación basada en Entropía:</strong> Implementación de algoritmos que garantizan la aleatoriedad y complejidad necesaria para contraseñas de alta seguridad.</span>
+                                <span class="lang-en"><strong>Entropy-based Generation:</strong> Implementation of algorithms that guarantee the randomness and complexity required for high-security passwords.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Verificación de Robustez:</strong> Análisis en tiempo real de la fortaleza de la contraseña generada o ingresada por el usuario.</span>
+                                <span class="lang-en"><strong>Strength Verification:</strong> Real-time analysis of the generated or user-input password strength.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Interfaz de Alta Fidelidad:</strong> Diseño minimalista y funcional enfocado en la usabilidad y la seguridad del usuario.</span>
+                                <span class="lang-en"><strong>High-Fidelity Interface:</strong> Minimalist and functional design focused on usability and user security.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Arquitectura & Desarrollo</span>
+                                <span class="lang-en"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Seguridad Local:</strong> Desarrollado bajo el ecosistema de <strong>Next.js</strong><br> <strong>Tailwind CSS:</strong> Utiliza bibliotecas criptográficas de vanguardia para asegurar que los secretos nunca salgan del entorno local del navegador.</span>
+                                <span class="lang-en"><strong>Local Security:</strong> Developed under the <strong>Next.js</strong> ecosystem<br> <strong>Tailwind CSS:</strong> Utilizes cutting-edge cryptographic libraries to ensure secrets never leave the local browser environment.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">
+                                <span class="lang-es">Ciberseguridad</span>
+                                <span class="lang-en">Cybersecurity</span>
+                            </span>
+                            <span class="tag">Cryptography</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://genpass.brexum.ar/" target="_blank" data-preview-url="https://genpass.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://genpass.brexum.ar/" data-preview-name="GenPass"></div>
+                    </div>
+                </article>
+
+                <!-- Precio Súper -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>Precio Súper</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Comparador de precios de supermercados en Argentina que centraliza y actualiza en tiempo real la oferta de las principales cadenas del país."</span>
+                            <span class="lang-en">"Supermarket price comparator for Argentina that centralizes and updates the offerings of the country's main retail chains in real time."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Motor de Scraping en Go:</strong> API propia desarrollada en Go que recolecta y normaliza precios de múltiples cadenas (Día, Jumbo, Disco, Carrefour, Coto, Vea, Farmacity, Mas Online) de forma concurrente y resiliente ante fallos parciales.</span>
+                                <span class="lang-en"><strong>Go Scraping Engine:</strong> Custom API built in Go that concurrently collects and normalizes prices from multiple retail chains (Día, Jumbo, Disco, Carrefour, Coto, Vea, Farmacity, Mas Online), resilient to partial scraper failures.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Buscador y Filtros por Categoría:</strong> Búsqueda de productos en tiempo real con filtrado por categorías (almacén, bebidas, frescos, golosinas, limpieza) sobre datos unificados de todas las fuentes.</span>
+                                <span class="lang-en"><strong>Search & Category Filters:</strong> Real-time product search with category filtering (pantry, beverages, fresh, snacks, cleaning) over unified data from all sources.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Carrito Inteligente:</strong> Carrito de compras con persistencia local y exportación a Excel/CSV para comparar precios entre supermercados antes de comprar.</span>
+                                <span class="lang-en"><strong>Smart Cart:</strong> Shopping cart with local persistence and Excel/CSV export to compare prices across supermarkets before purchasing.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Arquitectura & Desarrollo</span>
+                                <span class="lang-en"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Backend Desacoplado:</strong> API REST en <strong>Go</strong> desplegada de forma independiente del frontend estático, con hardening de cabeceras de seguridad (CSP, HSTS, Anti-Clickjacking, X-Content-Type-Options) vía .htaccess.</span>
+                                <span class="lang-en"><strong>Decoupled Backend:</strong> REST API in <strong>Go</strong> deployed independently from the static frontend, with security header hardening (CSP, HSTS, Anti-Clickjacking, X-Content-Type-Options) via .htaccess.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Go (Golang)</span>
+                            <span class="tag">Web Scraping</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Bootstrap 5</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://preciosuper.brexum.ar/" target="_blank" data-preview-url="https://preciosuper.brexum.ar/" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver Proyecto</span>
+                            <span class="lang-en">View Project</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">En Producción</span>
+                            <span class="lang-en">In Production</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://preciosuper.brexum.ar/" data-preview-name="Precio Súper"></div>
+                    </div>
+                </article>
+
+                <!-- CamRecon -->
+                <article class="exp-card glass-card">
+                    <div class="exp-content">
+                        <h4>CamRecon</h4>
+                        <p class="project-description">
+                            <span class="lang-es">"Sistema de reconocimiento facial conectado a cámaras IP (RTSP) que identifica personas y traza automáticamente su recorrido por zonas, con registro de entrada, salida y permanencia."</span>
+                            <span class="lang-en">"Facial recognition system connected to IP cameras (RTSP) that identifies people and automatically traces their movement across zones, logging entry, exit, and dwell time."</span>
+                        </p>
+                        <ul class="exp-tasks">
+                            <li>
+                                <span class="lang-es"><strong>Reconocimiento Facial Multi-Cámara:</strong> Conexión a cámaras IP/DVR/NVR vía RTSP con reconocimiento facial (face_recognition/dlib) y soporte multi-foto por perfil de empleado.</span>
+                                <span class="lang-en"><strong>Multi-Camera Facial Recognition:</strong> Connection to IP/DVR/NVR cameras via RTSP with facial recognition (face_recognition/dlib) and multi-photo support per employee profile.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Tracking de Recorrido por Zonas:</strong> Asignación de cámaras a áreas configurables y registro automático de sesiones con entrada, salida y duración en formato HH:MM:SS.</span>
+                                <span class="lang-en"><strong>Zone-based Tracking:</strong> Assignment of cameras to configurable areas and automatic session logging with entry, exit, and duration in HH:MM:SS format.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es"><strong>Panel de Administración:</strong> Gestión de empleados, vista en vivo, asistente guiado de vinculación de cámaras y reportes de recorrido descargables por empleado.</span>
+                                <span class="lang-en"><strong>Admin Panel:</strong> Employee management, live view, guided camera-linking wizard, and downloadable per-employee movement reports.</span>
+                            </li>
+                        </ul>
+
+                        <div class="logros-container">
+                            <span class="logros-title">
+                                <span class="lang-es"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Arquitectura & Desarrollo</span>
+                                <span class="lang-en"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Architecture & Development</span>
+                            </span>
+                            <div class="logro-card" style="width: 100%;">
+                                <span class="lang-es"><strong>Visión por Computadora:</strong> Backend en <strong>Python</strong> con <strong>FastAPI</strong>, <strong>OpenCV</strong> y SQLite, empaquetado con <strong>Docker/Docker Compose</strong> para despliegue en VPS. Frontend en JS vainilla con Tailwind CSS.</span>
+                                <span class="lang-en"><strong>Computer Vision:</strong> Backend in <strong>Python</strong> with <strong>FastAPI</strong>, <strong>OpenCV</strong>, and SQLite, packaged with <strong>Docker/Docker Compose</strong> for VPS deployment. Vanilla JS frontend with Tailwind CSS.</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags" style="margin-top: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">
+                                <span class="lang-es">Visión por Computadora</span>
+                                <span class="lang-en">Computer Vision</span>
+                            </span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="exp-sidebar">
+                        <a href="https://github.com/luisafricano/CamRecon.git" target="_blank" data-preview-url="https://github.com/luisafricano/CamRecon" class="btn btn-outline"
+                            style="width: 100%; justify-content: center; gap: 0.8rem; white-space: nowrap;">
+                            <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i>
+                            <span class="lang-es">Ver en GitHub</span>
+                            <span class="lang-en">View on GitHub</span>
+                        </a>
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            <span class="lang-es">Código Abierto</span>
+                            <span class="lang-en">Open Source</span>
+                        </div>
+                        <div class="link-preview-slot" data-preview-slot="https://github.com/luisafricano/CamRecon" data-preview-name="CamRecon"></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="section-header" id="certificaciones">
+                <h2 class="section-title">
+                    <span class="lang-es">Certificaciones y Cursos</span>
+                    <span class="lang-en">Certifications & Courses</span>
+                </h2>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Linux Customization Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Personalización de Entorno Linux</span>
+                            <span class="lang-en">Linux Environment Customization</span>
+                        </h4>
+                        <span class="cert-issuer">Hack4u</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: oct. 2025</span>
+                                <span class="lang-en">Issued: Oct 2025</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">6356-9341-9535-2592</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://hack4u.io/certificate/6356-9341-9535-2592" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Javascript Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>JavaScript</h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: ene. 2023</span>
+                                <span class="lang-en">Issued: Jan 2023</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">654ec219088d9fcd682bdf52</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/654ec219088d9fcd682bdf52?lang"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Leadership Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Liderazgo y Gestión de Equipos</span>
+                            <span class="lang-en">Leadership & Team Management</span>
+                        </h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: ene. 2024</span>
+                                <span class="lang-en">Issued: Jan 2024</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">662625038560aa2dd7622bea</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/662625038560aa2dd7622bea?lang"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Web Dev Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Desarrollador Web</span>
+                            <span class="lang-en">Web Developer</span>
+                        </h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: jun. 2023 · Vencimiento: jun. 2030</span>
+                                <span class="lang-en">Issued: Jun 2023 · Expires: Jun 2030</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">64b3313a3e4a1b0002d4de48</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <div class="cert-highlight">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 3h12l4 6-10 12L2 9z" />
+                                <path d="M11 3L8 9l3 12 3-12-3-6z" />
+                                <path d="M2 9h20" />
+                            </svg>
+                            <span class="lang-es">Top 10 Proyectos</span>
+                            <span class="lang-en">Top 10 Projects</span>
+                        </div>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/64b3313a3e4a1b0002d4de48?lang=es"
+                            target="_blank" class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Prompt Engineering Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Aprende Prompt Engineering</span>
+                            <span class="lang-en">Learn Prompt Engineering</span>
+                        </h4>
+                        <span class="cert-issuer">Hola Mundo</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: sept. 2025</span>
+                                <span class="lang-en">Issued: Sep 2025</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">5sn16mx7lh</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://academia.holamundo.io/certificates/5sn16mx7lh" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Claude Code Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Claude Code para Profesionales</span>
+                            <span class="lang-en">Claude Code for Professionals</span>
+                        </h4>
+                        <span class="cert-issuer">Hola Mundo</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: mar. 2026</span>
+                                <span class="lang-en">Issued: Mar 2026</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">pl1rjy9j6i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://academia.holamundo.io/certificates/pl1rjy9j6i" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Ultimate AI Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">Ultimate AI: Desarrollo de Software Asistido por IA</span>
+                            <span class="lang-en">Ultimate AI: AI-Assisted Software Development</span>
+                        </h4>
+                        <span class="cert-issuer">Hola Mundo</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: ago. 2026</span>
+                                <span class="lang-en">Issued: Aug 2026</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">e1br4xfp3i</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://academia.holamundo.io/certificates/e1br4xfp3i" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Ultimate N8N Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>Ultimate N8N</h4>
+                        <span class="cert-issuer">Hola Mundo</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: may. 2026</span>
+                                <span class="lang-en">Issued: May 2026</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">tjx21mecfu</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://academia.holamundo.io/certificates/tjx21mecfu" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- OpenClaw Course -->
+                <article class="cert-card glass-card">
+                    <div class="cert-info">
+                        <h4>
+                            <span class="lang-es">OpenClaw para Desarrolladores</span>
+                            <span class="lang-en">OpenClaw for Developers</span>
+                        </h4>
+                        <span class="cert-issuer">Hola Mundo</span>
+                        <div class="cert-details">
+                            <p>
+                                <span class="lang-es">Expedición: sept. 2026</span>
+                                <span class="lang-en">Issued: Sep 2026</span>
+                            </p>
+                            <p>
+                                <span class="lang-es">ID de credencial:</span>
+                                <span class="lang-en">Credential ID:</span>
+                                <span class="cert-id">rtpbi0lapn</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <a href="https://academia.holamundo.io/certificates/rtpbi0lapn" target="_blank"
+                            class="btn btn-outline btn-cert">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            <span class="lang-es">Ver certificado</span>
+                            <span class="lang-en">View certificate</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-links" style="gap: 1.5rem;">
+                <a href="#" class="btn btn-primary btn-sm btn-cv-trigger">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span class="lang-es">Descargar CV</span>
+                    <span class="lang-en">Download Resume</span>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm btn-contact-trigger">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <span class="lang-es">Contacto</span>
+                    <span class="lang-en">Contact</span>
+                </a>
+            </div>
+            <p class="copyright">
+                <span class="lang-es">&copy; 2026 LUIS AFRICANO. Todos los derechos reservados.</span>
+                <span class="lang-en">&copy; 2026 LUIS AFRICANO. All rights reserved.</span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Selector de temas TEMPORAL — oculto: el tema por defecto quedó fijo en
+         "Gris Azulado" (data-theme="slate" en <html>). Se deja el código
+         comentado, sin borrar, por si se necesita reactivar la comparación
+         de paletas más adelante.
+    <div id="theme-switcher" class="theme-switcher">
+        <button id="theme-switcher-toggle" class="theme-switcher-toggle" type="button" aria-expanded="false"
+            aria-controls="theme-switcher-panel">
+            <i class="fa-solid fa-palette" aria-hidden="true"></i> <span>Temas (preview)</span>
+        </button>
+        <div id="theme-switcher-panel" class="theme-switcher-panel" hidden>
+            <p class="theme-switcher-title">Vista previa temporal — elegí una paleta</p>
+            <div class="theme-switcher-options">
+                <button type="button" class="theme-option" data-theme-id="">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #00c8ff, #00B8A9);"></span>
+                    Original (v1.0)
+                </button>
+                <button type="button" class="theme-option" data-theme-id="violet">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #A855F7, #6366F1);"></span>
+                    Aurora Violeta
+                </button>
+                <button type="button" class="theme-option" data-theme-id="amber">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #F59E0B, #F97316);"></span>
+                    Forja Ámbar
+                </button>
+                <button type="button" class="theme-option" data-theme-id="emerald">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #4ADE80, #22D3EE);"></span>
+                    Señal Esmeralda
+                </button>
+                <button type="button" class="theme-option" data-theme-id="sapphire">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #3B82F6, #0EA5E9);"></span>
+                    Acero Zafiro
+                </button>
+                <button type="button" class="theme-option" data-theme-id="slate">
+                    <span class="theme-swatch" style="background: linear-gradient(90deg, #94A3B8, #3B82F6);"></span>
+                    Gris Azulado
+                </button>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <script>
+        // Lee el color de tema activo (se actualiza al cambiar de tema con el selector temporal)
+        function themeColor(varName) {
+            return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+        }
+
+        // Language Selection Logic
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                document.body.classList.remove('lang-es');
+                document.body.classList.add('lang-en');
+                document.title = "Luis Africano | Professional Profile";
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'Luis Africano - Professional Profile. Lead in Cybersecurity Incident Management and IT Support.');
+                }
+            } else {
+                document.body.classList.remove('lang-en');
+                document.body.classList.add('lang-es');
+                document.title = "Luis Africano | Perfil Profesional";
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'Luis Africano - Perfil Profesional. Responsable de la Gestión de Incidentes de Ciberseguridad y Soporte TI.');
+                }
+            }
+
+            // Update selector UI active class
+            document.querySelectorAll('.lang-selector .btn-lang').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(`'${lang}'`)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Save preference
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang') || 'es';
+            setLanguage(savedLang);
+        });
+
+        // Mini implementación propia de splitText(target, { words: true }):
+        // el splitText real (con esta misma firma) es una utilidad de pago
+        // de Motion+ (import { splitText } from "motion-plus"), no está
+        // disponible gratis vía CDN. Esta versión replica su comportamiento
+        // básico: envuelve cada palabra del elemento en un <span> propio y
+        // devuelve { words }, listo para animar cada palabra por separado.
+        function splitText(target, opts) {
+            const el = typeof target === 'string' ? document.querySelector(target) : target;
+            if (!el) return { words: [] };
+
+            const fullText = el.textContent;
+            el.setAttribute('aria-label', fullText);
+            el.innerHTML = '';
+
+            const words = [];
+            fullText.split(/(\s+)/).forEach((part) => {
+                if (part === '') return;
+                if (/^\s+$/.test(part)) {
+                    el.appendChild(document.createTextNode(part));
+                    return;
+                }
+                const span = document.createElement('span');
+                span.className = 'split-word';
+                span.setAttribute('aria-hidden', 'true');
+                span.textContent = part;
+                el.appendChild(span);
+                words.push(span);
+            });
+
+            return { words };
+        }
+
+        // Título del hero: cada palabra tiene un ciclo continuo donde,
+        // justo antes de subir y desaparecer, sufre un efecto glitch (igual
+        // en espíritu al glitch que ya usan la pre-carga y los modales de
+        // terminal), con un pequeño stagger entre palabras.
+        (function () {
+            const heroTitle = document.querySelector('header#inicio h1');
+            if (!heroTitle) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            function start() {
+                const { words } = splitText(heroTitle, { words: true });
+                words.forEach((word, i) => {
+                    word.style.animationDelay = (i * 0.15) + 's';
+                });
+            }
+
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(start);
+            } else {
+                start();
+            }
+        })();
+
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            navLinks.querySelectorAll('.nav-link').forEach((link) => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Scroll Spy: resalta el link de nav activo según la sección visible
+        const navLinkEls = document.querySelectorAll('.nav-link[data-section]');
+        const spySections = Array.from(navLinkEls)
+            .map((link) => document.getElementById(link.dataset.section))
+            .filter(Boolean);
+
+        if ('IntersectionObserver' in window && spySections.length) {
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        navLinkEls.forEach((link) => {
+                            link.classList.toggle('active', link.dataset.section === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+            spySections.forEach((section) => spyObserver.observe(section));
+        }
+
+        // Scroll Reveal: fade/slide sutil al entrar en viewport (respeta prefers-reduced-motion vía CSS)
+        const revealTargets = document.querySelectorAll('.bento-item, .exp-card, .cert-card');
+        if ('IntersectionObserver' in window && revealTargets.length) {
+            revealTargets.forEach((el) => el.classList.add('reveal'));
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealTargets.forEach((el) => revealObserver.observe(el));
+        }
+
+        // Tech Marquee: baraja el orden de los logos en cada carga de página.
+        // El track tiene el mismo listado duplicado dos veces (truco para el
+        // loop infinito con translateX(-50%)): se toma solo la primera mitad,
+        // se mezcla una vez, y se reconstruye el track con esa mezcla
+        // repetida dos veces para no romper el loop.
+        (function () {
+            const track = document.querySelector('.tech-marquee-track');
+            if (!track) return;
+
+            const items = Array.from(track.children);
+            const half = items.slice(0, items.length / 2);
+
+            for (let i = half.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [half[i], half[j]] = [half[j], half[i]];
+            }
+
+            const frag = document.createDocumentFragment();
+            half.forEach((el) => frag.appendChild(el.cloneNode(true)));
+            half.forEach((el) => frag.appendChild(el.cloneNode(true)));
+            track.innerHTML = '';
+            track.appendChild(frag);
+        })();
+
+        // Interactive Background: a la derecha, terminal que "tipea" comandos
+        // (con salida larga simulada) ligada al scroll y reversible; a la
+        // izquierda, un explorador de archivos tipo VSCode con carpetas que
+        // se despliegan/contraen y los íconos de tecnologías del tech-marquee.
+        // Sin librerías nuevas (canvas 2D vanilla).
+        (function () {
+            const canvas = document.getElementById('bg-mesh');
+            if (!canvas || !canvas.getContext) return;
+
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+            let CYAN = '#00c8ff';
+            let TEAL = '#00B8A9';
+
+            function readThemeColors() {
+                const styles = getComputedStyle(document.documentElement);
+                CYAN = styles.getPropertyValue('--primary-cyan').trim() || CYAN;
+                TEAL = styles.getPropertyValue('--secondary-teal').trim() || TEAL;
+            }
+            readThemeColors();
+            window.addEventListener('themechange', () => {
+                readThemeColors();
+                if (reduceMotion) draw(performance.now());
+            });
+
+            function colorWithAlpha(hex, alpha) {
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
+                return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+            }
+
+            // ---- Terminal (margen derecho): comandos + su salida simulada ----
+            const COMMAND_BLOCKS = [
+                { cmd: '$ git log --oneline --graph -8', out: [
+                    'a1b2c3d (HEAD -> main) feat: add scanner module',
+                    '9f8e7d6 fix: docker healthcheck path',
+                    '5c4b3a2 chore: bump next.js to 14.2',
+                    'e1d2c3b refactor: split api routes',
+                    '7a6b5c4 feat: integrate n8n workflows',
+                    '3f2e1d0 test: add pandas etl coverage',
+                    'b9c8d7e docs: update README',
+                ]},
+                { cmd: '$ npm run build -- --mode production', out: [
+                    '> vite build',
+                    'vite v5.2.0 building for production...',
+                    '✓ 428 modules transformed.',
+                    'dist/index.html      1.2 kB',
+                    'dist/assets/app.js  184.3 kB',
+                    'dist/assets/app.css  22.7 kB',
+                    '✓ built in 3.42s',
+                ]},
+                { cmd: '$ docker compose up -d --build', out: [
+                    '[+] Building 12.4s',
+                    '=> [api] load build definition',
+                    '=> [web] load build definition',
+                    '[+] Running 4/4',
+                    '✔ Network app_default   Created',
+                    '✔ Container app-api-1   Started',
+                    '✔ Container app-web-1   Started',
+                    '✔ Container app-db-1    Started',
+                ]},
+                { cmd: '$ python manage_scan.py --target host.local', out: [
+                    '[*] Loading VirusTotal signatures...',
+                    '[*] Scanning 128 files...',
+                    '[+] 0 threats detected',
+                    '[+] Scan completed in 4.8s',
+                ]},
+                { cmd: '$ pytest tests/ -v --tb=short', out: [
+                    'test_api.py::test_auth       PASSED',
+                    'test_api.py::test_routes     PASSED',
+                    'test_vision.py::test_detector PASSED',
+                    'test_etl.py::test_pandas_load PASSED',
+                    '==== 24 passed in 2.31s ====',
+                ]},
+                { cmd: '$ ssh deploy@prod.server "systemctl status app"', out: [
+                    '● app.service - Production API',
+                    '   Active: active (running)',
+                    '   Main PID: 4821 (python3)',
+                    '   Memory: 128.4M',
+                    '   CPU: 0.4%',
+                ]},
+                { cmd: '$ curl -s https://api.internal/health | jq', out: [
+                    '{',
+                    '  "status": "ok",',
+                    '  "uptime": "14d 6h",',
+                    '  "version": "2.3.1"',
+                    '}',
+                ]},
+                { cmd: '$ n8n execute --workflow automation.json', out: [
+                    'Started execution 4821',
+                    'Node "Fetch Data" succeeded',
+                    'Node "Transform" succeeded',
+                    'Node "Notify" succeeded',
+                    'Workflow finished in 1.2s',
+                ]},
+            ];
+
+            // ---- Explorador (margen izquierdo): árbol tipo VSCode ----
+            const ICON_BASE = 'img/tech/';
+            const ICON_FILES = ['python', 'go', 'docker', 'nextjs', 'react', 'tailwindcss', 'html5', 'css3',
+                'javascript', 'bootstrap', 'fastapi', 'opencv', 'sqlite', 'pandas', 'n8n', 'linux', 'github', 'git', 'virustotal',
+                'anthropic', 'claude', 'opencode', 'gemini', 'metaai', 'githubcopilot', 'mistralai', 'deepseek', 'perplexity',
+                'evolutionapi', 'whatsapp', 'telegram', 'angular', 'vscode', 'visualstudio', 'microsoft', 'ios', 'macos', 'android',
+                'kalilinux', 'ubuntu', 'debian', 'parrotos'];
+            const ICON_EXT = { evolutionapi: 'png' }; // el resto son .svg
+            const iconImages = {};
+            ICON_FILES.forEach((key) => {
+                const img = new Image();
+                img.src = ICON_BASE + key + '.' + (ICON_EXT[key] || 'svg');
+                iconImages[key] = img;
+            });
+
+            const EXPLORER_TREE = [
+                { name: '.claude', type: 'dir', children: [
+                    { name: 'settings.json', type: 'file', icon: 'claude' },
+                ]},
+                { name: '.vscode', type: 'dir', children: [
+                    { name: 'settings.json', type: 'file', icon: 'vscode' },
+                ]},
+                { name: 'src', type: 'dir', children: [
+                    { name: 'api', type: 'dir', children: [
+                        { name: 'routes', type: 'dir', children: [
+                            { name: 'auth.py', type: 'file', icon: 'fastapi' },
+                            { name: 'scanner.py', type: 'file', icon: 'virustotal' },
+                            { name: 'reports.py', type: 'file', icon: 'fastapi' },
+                        ]},
+                        { name: 'main.py', type: 'file', icon: 'fastapi' },
+                        { name: 'database.sqlite', type: 'file', icon: 'sqlite' },
+                    ]},
+                    { name: 'automation', type: 'dir', children: [
+                        { name: 'workflow.json', type: 'file', icon: 'n8n' },
+                        { name: 'analysis.py', type: 'file', icon: 'pandas' },
+                        { name: 'etl.py', type: 'file', icon: 'python' },
+                    ]},
+                    { name: 'vision', type: 'dir', children: [
+                        { name: 'detector.py', type: 'file', icon: 'opencv' },
+                        { name: 'utils.py', type: 'file', icon: 'python' },
+                    ]},
+                    { name: 'ai', type: 'dir', children: [
+                        { name: 'anthropic_client.py', type: 'file', icon: 'anthropic' },
+                        { name: 'gemini_client.py', type: 'file', icon: 'gemini' },
+                        { name: 'mistral_client.py', type: 'file', icon: 'mistralai' },
+                        { name: 'deepseek_client.py', type: 'file', icon: 'deepseek' },
+                        { name: 'perplexity_client.py', type: 'file', icon: 'perplexity' },
+                        { name: 'llama_client.py', type: 'file', icon: 'metaai' },
+                    ]},
+                    { name: 'components', type: 'dir', children: [
+                        { name: 'Navbar.jsx', type: 'file', icon: 'react' },
+                        { name: 'Footer.jsx', type: 'file', icon: 'react' },
+                        { name: 'Card.jsx', type: 'file', icon: 'react' },
+                    ]},
+                    { name: 'hooks', type: 'dir', children: [
+                        { name: 'useAuth.js', type: 'file', icon: 'javascript' },
+                        { name: 'useFetch.js', type: 'file', icon: 'javascript' },
+                    ]},
+                    { name: 'App.jsx', type: 'file', icon: 'react' },
+                    { name: 'styles.css', type: 'file', icon: 'css3' },
+                ]},
+                { name: 'integrations', type: 'dir', children: [
+                    { name: 'whatsapp_bot.py', type: 'file', icon: 'whatsapp' },
+                    { name: 'telegram_bot.py', type: 'file', icon: 'telegram' },
+                    { name: 'evolution_client.py', type: 'file', icon: 'evolutionapi' },
+                ]},
+                { name: 'web', type: 'dir', children: [
+                    { name: 'app', type: 'dir', children: [
+                        { name: 'page.tsx', type: 'file', icon: 'nextjs' },
+                        { name: 'layout.tsx', type: 'file', icon: 'nextjs' },
+                    ]},
+                    { name: 'public', type: 'dir', children: [
+                        { name: 'favicon.ico', type: 'file' },
+                        { name: 'logo.svg', type: 'file' },
+                    ]},
+                    { name: 'tailwind.config.js', type: 'file', icon: 'tailwindcss' },
+                    { name: 'index.html', type: 'file', icon: 'html5' },
+                    { name: 'script.js', type: 'file', icon: 'javascript' },
+                ]},
+                { name: 'angular-admin', type: 'dir', children: [
+                    { name: 'app.module.ts', type: 'file', icon: 'angular' },
+                    { name: 'app.component.ts', type: 'file', icon: 'angular' },
+                ]},
+                { name: 'mobile', type: 'dir', children: [
+                    { name: 'AppDelegate.swift', type: 'file', icon: 'ios' },
+                    { name: 'MainActivity.kt', type: 'file', icon: 'android' },
+                    { name: 'build-macos.sh', type: 'file', icon: 'macos' },
+                ]},
+                { name: 'docker', type: 'dir', children: [
+                    { name: 'Dockerfile.ubuntu', type: 'file', icon: 'ubuntu' },
+                    { name: 'Dockerfile.debian', type: 'file', icon: 'debian' },
+                ]},
+                { name: 'security', type: 'dir', children: [
+                    { name: 'kali-audit.sh', type: 'file', icon: 'kalilinux' },
+                    { name: 'parrot-pentest.sh', type: 'file', icon: 'parrotos' },
+                ]},
+                { name: 'scripts', type: 'dir', children: [
+                    { name: 'deploy.sh', type: 'file', icon: 'linux' },
+                    { name: 'setup.py', type: 'file', icon: 'python' },
+                    { name: 'backup.sh', type: 'file', icon: 'linux' },
+                ]},
+                { name: 'tests', type: 'dir', children: [
+                    { name: 'test_api.py', type: 'file', icon: 'python' },
+                    { name: 'test_vision.py', type: 'file', icon: 'opencv' },
+                    { name: 'test_etl.py', type: 'file', icon: 'pandas' },
+                ]},
+                { name: 'config', type: 'dir', children: [
+                    { name: 'docker-compose.yml', type: 'file', icon: 'docker' },
+                    { name: 'nginx.conf', type: 'file', icon: 'linux' },
+                    { name: 'azure-pipeline.yml', type: 'file', icon: 'microsoft' },
+                ]},
+                { name: 'legacy', type: 'dir', children: [
+                    { name: 'Project.sln', type: 'file', icon: 'visualstudio' },
+                ]},
+                { name: 'server.go', type: 'file', icon: 'go' },
+                { name: 'Dockerfile', type: 'file', icon: 'docker' },
+                { name: 'bootstrap.min.css', type: 'file', icon: 'bootstrap' },
+                { name: '.github', type: 'dir', children: [
+                    { name: 'workflows.yml', type: 'file', icon: 'github' },
+                    { name: 'copilot-instructions.md', type: 'file', icon: 'githubcopilot' },
+                    { name: 'ISSUE_TEMPLATE.md', type: 'file', icon: 'github' },
+                ]},
+                { name: '.opencode', type: 'dir', children: [
+                    { name: 'config.json', type: 'file', icon: 'opencode' },
+                ]},
+                { name: '.gitignore', type: 'file', icon: 'git' },
+                { name: 'README.md', type: 'file' },
+            ];
+
+            // Asigna a cada nodo (carpeta o archivo) un umbral de scroll
+            // ("revealAt", 0 a REVEAL_MAX_FRACTION) según su posición en un
+            // recorrido en profundidad: cuanto más se avanza en el scroll de
+            // toda la página, más carpetas y archivos "existen" en el árbol.
+            // Como los hijos siempre reciben un umbral mayor al de su padre,
+            // el árbol crece de forma consistente (nunca aparece un archivo
+            // antes que su carpeta contenedora).
+            const REVEAL_MAX_FRACTION = 0.85;
+            function countNodes(nodes) {
+                let c = 0;
+                nodes.forEach((node) => {
+                    c += 1;
+                    if (node.type === 'dir') c += countNodes(node.children);
+                });
+                return c;
+            }
+            const EXPLORER_TOTAL_NODES = countNodes(EXPLORER_TREE);
+            (function assignReveal(nodes, counter) {
+                nodes.forEach((node) => {
+                    node.revealAt = (counter.i / Math.max(1, EXPLORER_TOTAL_NODES - 1)) * REVEAL_MAX_FRACTION;
+                    counter.i++;
+                    if (node.type === 'dir') {
+                        node.seed = Math.random() * 1000; // para el toggle abierto/cerrado, ver hashOpen()
+                        assignReveal(node.children, counter);
+                    }
+                });
+            })(EXPLORER_TREE, { i: 0 });
+
+            // Ruido pseudoaleatorio (no periódico) por carpeta, para que el
+            // abrir/cerrar de cada una sea independiente de las demás y no
+            // puedan "coincidir" todas cerradas al mismo scroll (lo que
+            // pasaba con un simple seno: frecuencias parecidas generan
+            // patrones de interferencia que las sincronizan).
+            const TOGGLE_STEP = 600; // px de scroll entre posibles cambios de estado
+            function hashOpen(node, scrollY) {
+                const step = Math.floor(scrollY / TOGGLE_STEP);
+                const x = Math.sin((node.seed + step * 12.9898) * 78.233) * 43758.5453;
+                const n = x - Math.floor(x);
+                return n > 0.32; // abierta ~68% del tiempo
+            }
+
+            let width = 0;
+            let height = 0;
+            let dpr = 1;
+            let lineHeight = 22;
+            let fontSize = 14;
+            let lines = []; // terminal (margen derecho)
+            let docHeight = 0;
+            let scrollY = window.scrollY;
+            let mouseX = -9999;
+            let mouseY = -9999;
+            let rafId = null;
+            let gutters = null; // { leftX, leftWidth, rightX, rightWidth } en modo desktop
+
+            const MIN_RIGHT_GUTTER = 130; // ancho al que la terminal se ve a tamaño completo
+            const MIN_LEFT_GUTTER = 190; // ancho al que el explorador se ve a tamaño completo (indentación + ícono + nombre)
+            const MIN_VISIBLE_GUTTER = 70; // por debajo de esto, ya no entra ni achicando
+            const MIN_GUTTER_SCALE = 0.55; // achique máximo antes de dejar de mostrarse
+            const HEADER_BOTTOM = 96; // nunca se dibuja texto por encima de esta y (debajo del header)
+
+            function smoothstep(t) {
+                const c = Math.max(0, Math.min(1, t));
+                return c * c * (3 - 2 * c);
+            }
+
+            function buildTerminalLines(docHeight) {
+                const rows = [];
+                const maxRows = Math.ceil(docHeight / lineHeight) + 4;
+                let rowIndex = 0;
+                while (rowIndex < maxRows) {
+                    const block = COMMAND_BLOCKS[Math.floor(Math.random() * COMMAND_BLOCKS.length)];
+                    rows.push({ text: block.cmd, oy: rowIndex * lineHeight, kind: 'cmd', revealedNow: 0 });
+                    rowIndex++;
+                    for (let k = 0; k < block.out.length && rowIndex < maxRows; k++) {
+                        rows.push({ text: block.out[k], oy: rowIndex * lineHeight, kind: 'out', revealedNow: 0 });
+                        rowIndex++;
+                    }
+                    rowIndex++; // línea en blanco entre bloques
+                }
+                return rows;
+            }
+
+            function computeGutters() {
+                if (isMobile()) {
+                    gutters = null;
+                    return;
+                }
+                const contentEl = document.querySelector('.container');
+                if (!contentEl) {
+                    gutters = null;
+                    return;
+                }
+                const rect = contentEl.getBoundingClientRect();
+                gutters = {
+                    leftX: 20,
+                    leftWidth: Math.max(0, rect.left - 40),
+                    rightX: rect.right + 20,
+                    rightWidth: Math.max(0, width - rect.right - 40),
+                };
+            }
+
+            function layout() {
+                docHeight = Math.max(document.body.scrollHeight, window.innerHeight);
+                lineHeight = isMobile() ? 20 : 24;
+                fontSize = isMobile() ? 12 : 14;
+                lines = buildTerminalLines(docHeight);
+            }
+
+            // Recorre el árbol del explorador y devuelve las filas visibles a
+            // este scroll: un nodo "existe" recién a partir de su propio
+            // umbral (revealAt), y una carpeta ya revelada se abre o cierra
+            // según hashOpen() (independiente entre carpetas, sin periodicidad
+            // que las sincronice).
+            function walkExplorer(scrollFraction, scrollYNow) {
+                const rows = [];
+                function visit(nodes, depth) {
+                    for (const node of nodes) {
+                        if (node.revealAt > scrollFraction) continue; // todavía no "existe" a este scroll
+                        if (node.type === 'dir') {
+                            const isOpen = hashOpen(node, scrollYNow);
+                            rows.push({ node, depth, isOpen });
+                            if (isOpen) visit(node.children, depth + 1);
+                        } else {
+                            rows.push({ node, depth });
+                        }
+                    }
+                }
+                visit(EXPLORER_TREE, 0);
+                return rows;
+            }
+
+            // Dibuja un ícono de carpeta (cerrada u abierta) como path
+            // vectorial en el color del tema activo, en vez de usar emojis
+            // de carpeta (el canvas no admite íconos de Font Awesome).
+            function drawFolderIcon(cx, cy, color, alpha, open, scale) {
+                scale = scale || 1;
+                const w = 13 * scale, h = 10 * scale;
+                const x = cx, y = cy - h / 2;
+                ctx.save();
+                ctx.fillStyle = colorWithAlpha(color, alpha);
+                ctx.beginPath();
+                ctx.moveTo(x, y + h);
+                ctx.lineTo(x, y + 1.5);
+                ctx.lineTo(x + w * 0.4, y + 1.5);
+                ctx.lineTo(x + w * 0.5, y);
+                ctx.lineTo(x + w, y);
+                ctx.lineTo(x + w, y + h);
+                ctx.closePath();
+                ctx.fill();
+                if (open) {
+                    ctx.fillStyle = colorWithAlpha(color, alpha * 0.55);
+                    ctx.beginPath();
+                    ctx.moveTo(x - 0.5, y + 3);
+                    ctx.lineTo(x + w * 0.22, y + 3);
+                    ctx.lineTo(x + w + 1, y + 3);
+                    ctx.lineTo(x + w * 0.85, y + h + 1);
+                    ctx.lineTo(x - 1.5, y + h + 1);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+
+            function drawExplorer(time, scrollFraction) {
+                if (!gutters || gutters.leftWidth < MIN_VISIBLE_GUTTER) return;
+
+                // El explorador achica letras, íconos e indentación cuando
+                // el gutter es angosto, en vez de desaparecer de golpe: así
+                // el código (a la derecha) y las carpetas (a la izquierda)
+                // siempre quedan visibles al mismo tiempo.
+                const scale = Math.max(MIN_GUTTER_SCALE, Math.min(1, gutters.leftWidth / MIN_LEFT_GUTTER));
+
+                const rowHeight = 19 * scale;
+                const explFontSize = 12 * scale;
+                const rows = walkExplorer(scrollFraction, scrollY);
+                if (rows.length === 0) return;
+                const iconSize = 13 * scale;
+
+                ctx.font = `${explFontSize}px "Segoe UI", system-ui, sans-serif`;
+                ctx.textBaseline = 'middle';
+
+                // Apilado simple desde arriba, como un explorador normal: va
+                // llenando el borde izquierdo hacia abajo a medida que se
+                // revelan más nodos (o se abren más carpetas), sin ocultar
+                // nada por encima del header. Si en algún momento no entra
+                // todo en el alto disponible, simplemente se recorta abajo.
+                rows.forEach((row, i) => {
+                    const y = HEADER_BOTTOM + i * rowHeight;
+                    if (y > height + rowHeight) return;
+
+                    const x = gutters.leftX + row.depth * 14 * scale;
+                    const rowMidY = y + rowHeight / 2;
+
+                    const hovered = !isMobile() && mouseX < gutters.leftX + gutters.leftWidth &&
+                        mouseX > gutters.leftX - 10 && Math.abs(mouseY - rowMidY) < rowHeight / 2;
+
+                    if (hovered) {
+                        ctx.fillStyle = colorWithAlpha(CYAN, 0.07);
+                        ctx.fillRect(gutters.leftX - 10, y, gutters.leftWidth, rowHeight);
+                    }
+
+                    let cursorX = x;
+                    if (row.node.type === 'dir') {
+                        ctx.fillStyle = colorWithAlpha(CYAN, hovered ? 0.55 : 0.3);
+                        ctx.fillText(row.isOpen ? '▾' : '▸', cursorX, rowMidY);
+                        cursorX += 12 * scale;
+                        drawFolderIcon(cursorX, rowMidY, CYAN, hovered ? 0.65 : 0.4, row.isOpen, scale);
+                        cursorX += 16 * scale;
+                        ctx.fillStyle = colorWithAlpha(CYAN, hovered ? 0.6 : 0.32);
+                        ctx.fillText(row.node.name, cursorX, rowMidY);
+                    } else {
+                        const icon = row.node.icon && iconImages[row.node.icon];
+                        if (icon && icon.complete && icon.naturalWidth > 0) {
+                            ctx.save();
+                            ctx.globalAlpha = hovered ? 0.8 : 0.4;
+                            ctx.drawImage(icon, cursorX, rowMidY - iconSize / 2, iconSize, iconSize);
+                            ctx.restore();
+                        }
+                        cursorX += iconSize + 6 * scale;
+                        ctx.fillStyle = colorWithAlpha(TEAL, hovered ? 0.55 : 0.26);
+                        ctx.fillText(row.node.name, cursorX, rowMidY);
+                    }
+                });
+            }
+
+            function draw(time) {
+                ctx.clearRect(0, 0, width, height);
+
+                const mobile = isMobile();
+                const parallax = mobile ? 0.35 : 0.55;
+                const mouseRadius = mobile ? 0 : 170;
+
+                // Fracción de scroll recorrida en toda la página (0 al inicio,
+                // 1 al final). Se reutiliza tanto para el "ancla" de la
+                // terminal como para hacer crecer el árbol del explorador.
+                const maxScroll = Math.max(1, docHeight - height);
+                const scrollFraction = Math.max(0, Math.min(1, scrollY / maxScroll));
+
+                // El "frente" de escritura se ancla a una posición fija en
+                // pantalla (un poco debajo del centro) mientras se hace scroll
+                // por el cuerpo del documento, para que el tipeo acompañe el
+                // scroll 1:1 en vez de adelantarse. Cerca del principio y del
+                // final del documento, ese ancla se desplaza rápido hacia el
+                // borde debajo del header (arriba) o hasta el fondo del
+                // viewport (abajo), acelerando el efecto en los extremos.
+                const pinnedAnchor = height * 0.58;
+                const topZone = 0.08;
+                const bottomZone = 0.90;
+
+                let anchorY;
+                if (scrollFraction < topZone) {
+                    anchorY = HEADER_BOTTOM + (pinnedAnchor - HEADER_BOTTOM) * smoothstep(scrollFraction / topZone);
+                } else if (scrollFraction > bottomZone) {
+                    anchorY = pinnedAnchor + (height - pinnedAnchor) * smoothstep((scrollFraction - bottomZone) / (1 - bottomZone));
+                } else {
+                    anchorY = pinnedAnchor;
+                }
+
+                if (!mobile) drawExplorer(time, scrollFraction);
+
+                // La terminal también achica su letra cuando el gutter
+                // derecho es angosto, en vez de desaparecer: así conviven
+                // siempre con el explorador de carpetas a la izquierda.
+                const terminalScale = (!mobile && gutters)
+                    ? Math.max(MIN_GUTTER_SCALE, Math.min(1, gutters.rightWidth / MIN_RIGHT_GUTTER))
+                    : 1;
+                const drawFontSize = fontSize * terminalScale;
+
+                ctx.font = `${drawFontSize}px "Courier New", monospace`;
+                ctx.textBaseline = 'top';
+                const charWidth = drawFontSize * 0.6;
+
+                const headOy = scrollY * parallax + anchorY;
+
+                // Máquina de escribir estrictamente secuencial: una única fila
+                // "activa" a la vez (rowProgress indica en qué fila estamos y
+                // qué fracción de ella ya se tipeó). Las filas anteriores están
+                // 100% completas, las posteriores en 0%: nunca hay dos filas
+                // escribiéndose al mismo tiempo.
+                const rowProgress = headOy / lineHeight;
+                const frontRow = Math.floor(rowProgress);
+                const frontFraction = rowProgress - frontRow;
+                const CATCH_UP = reduceMotion ? 1 : 0.16;
+
+                lines.forEach((line) => {
+                    const y = line.oy - scrollY * parallax;
+                    if (y < HEADER_BOTTOM || y > height + lineHeight) return;
+
+                    let x, maxWidth;
+                    if (!mobile && gutters) {
+                        if (gutters.rightWidth < MIN_VISIBLE_GUTTER) return;
+                        x = gutters.rightX;
+                        maxWidth = gutters.rightWidth;
+                    } else {
+                        x = 24;
+                        maxWidth = width - 48;
+                    }
+
+                    const rowIdx = Math.round(line.oy / lineHeight);
+                    let targetChars;
+                    if (rowIdx < frontRow) targetChars = line.text.length;
+                    else if (rowIdx === frontRow) targetChars = frontFraction * line.text.length;
+                    else targetChars = 0;
+
+                    line.revealedNow += (targetChars - line.revealedNow) * CATCH_UP;
+                    if (Math.abs(targetChars - line.revealedNow) < 0.05) line.revealedNow = targetChars;
+                    const revealed = line.revealedNow;
+                    const maxChars = Math.max(1, Math.floor(maxWidth / charWidth));
+                    const color = line.kind === 'cmd' ? TEAL : CYAN;
+
+                    if (revealed <= 0.01) {
+                        // La fila activa, aunque todavía no tipeó ningún
+                        // carácter, muestra el cursor "en espera" parpadeando.
+                        if (rowIdx === frontRow && !reduceMotion) {
+                            const blink = Math.sin(time * 0.006) > 0;
+                            if (blink) {
+                                ctx.fillStyle = colorWithAlpha(color, 0.5);
+                                ctx.fillRect(x, y, drawFontSize * 0.55, drawFontSize);
+                            }
+                        }
+                        return;
+                    }
+
+                    const visibleText = line.text.slice(0, Math.min(Math.floor(revealed), maxChars));
+
+                    const dx = (x + visibleText.length * drawFontSize * 0.3) - mouseX;
+                    const dy = (y + lineHeight / 2) - mouseY;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const hovered = mouseRadius > 0 && dist < mouseRadius;
+
+                    const baseAlpha = line.kind === 'cmd' ? 0.38 : 0.28;
+                    const alpha = hovered ? Math.min(0.75, baseAlpha + 0.3) : baseAlpha;
+
+                    ctx.save();
+                    if (hovered) {
+                        ctx.shadowColor = colorWithAlpha(color, 0.6);
+                        ctx.shadowBlur = 6;
+                    }
+                    ctx.fillStyle = colorWithAlpha(color, alpha);
+                    ctx.fillText(visibleText, x, y);
+                    ctx.restore();
+
+                    // Cursor parpadeante al final de la línea que se está tipeando ahora mismo
+                    const isActive = rowIdx === frontRow && revealed < Math.min(line.text.length, maxChars) - 0.5;
+                    if (isActive && !reduceMotion) {
+                        const blink = Math.sin(time * 0.006) > 0;
+                        if (blink) {
+                            const cursorX = x + visibleText.length * drawFontSize * 0.6;
+                            ctx.fillStyle = colorWithAlpha(color, 0.5);
+                            ctx.fillRect(cursorX, y, drawFontSize * 0.55, drawFontSize);
+                        }
+                    }
+                });
+            }
+
+            function loop(time) {
+                draw(time);
+                rafId = requestAnimationFrame(loop);
+            }
+
+            function startLoop() {
+                if (rafId !== null) return;
+                rafId = requestAnimationFrame(loop);
+            }
+
+            function stopLoop() {
+                if (rafId === null) return;
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+
+            function resize() {
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                computeGutters();
+                layout();
+                draw(performance.now());
+            }
+
+            function onScroll() {
+                scrollY = window.scrollY;
+                if (reduceMotion) draw(performance.now());
+            }
+
+            function onMouseMove(e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            }
+
+            function onMouseLeave() {
+                mouseX = -9999;
+                mouseY = -9999;
+            }
+
+            function onVisibilityChange() {
+                if (reduceMotion) return;
+                if (document.visibilityState === 'visible') startLoop();
+                else stopLoop();
+            }
+
+            let resizeTimer;
+            function onResize() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resize, 150);
+            }
+
+            resize();
+            window.addEventListener('load', resize);
+            window.addEventListener('resize', onResize);
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (!reduceMotion) {
+                window.addEventListener('mousemove', onMouseMove, { passive: true });
+                window.addEventListener('mouseleave', onMouseLeave);
+                document.addEventListener('visibilitychange', onVisibilityChange);
+                startLoop();
+            }
+        })();
+
+        // Timeline: línea de progreso coloreada + años/dots activos en "Trayectoria Profesional"
+        (function () {
+            const track = document.querySelector('.timeline-track');
+            const progressBar = document.getElementById('timeline-progress');
+            const markersContainer = document.getElementById('timeline-markers');
+            if (!track || !progressBar || !markersContainer) return;
+
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+            // El dot siempre vive en el overlay absoluto (#timeline-markers), sobre la
+            // línea. En mobile el año se saca del overlay y se inserta en flujo normal,
+            // como una fila propia justo antes de su tarjeta (alineada a la izquierda,
+            // pegada al dot) para no robarle ancho a la tarjeta.
+            const cards = Array.from(track.querySelectorAll('.exp-card'));
+            const markers = cards.map((card) => {
+                const dot = card.querySelector('.timeline-dot');
+                const year = card.querySelector('.timeline-year');
+                if (dot) markersContainer.appendChild(dot);
+                if (year) markersContainer.appendChild(year);
+                return { card, dot, year };
+            });
+
+            let mobileLayout = null;
+            function layoutYears() {
+                const mobile = isMobile();
+                if (mobile === mobileLayout) return;
+                mobileLayout = mobile;
+
+                markers.forEach(({ card, year }) => {
+                    if (!year) return;
+                    if (mobile) {
+                        year.classList.add('timeline-year--inline');
+                        year.style.top = '';
+                        if (year.nextElementSibling !== card || year.parentElement !== card.parentElement) {
+                            card.parentElement.insertBefore(year, card);
+                        }
+                    } else {
+                        year.classList.remove('timeline-year--inline');
+                        if (year.parentElement !== markersContainer) {
+                            markersContainer.appendChild(year);
+                        }
+                    }
+                });
+            }
+
+            function positionMarkers() {
+                layoutYears();
+                const trackRect = track.getBoundingClientRect();
+                markers.forEach(({ card, dot, year }) => {
+                    if (!dot) return;
+                    if (mobileLayout && year) {
+                        // El año vive en flujo normal (antes de su tarjeta); el dot se
+                        // alinea verticalmente al centro del propio texto del año.
+                        const yearRect = year.getBoundingClientRect();
+                        dot.style.top = (yearRect.top - trackRect.top + yearRect.height / 2 - 7) + 'px';
+                    } else {
+                        // Desktop: dot y año se alinean juntos con el borde superior de la tarjeta.
+                        const cardRect = card.getBoundingClientRect();
+                        const top = (cardRect.top - trackRect.top + 32) + 'px';
+                        dot.style.top = top;
+                        if (year) year.style.top = top;
+                    }
+                });
+            }
+
+            let resizeTimer;
+            function onMarkersResize() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(positionMarkers, 120);
+            }
+
+            positionMarkers();
+            window.addEventListener('load', positionMarkers);
+            window.addEventListener('resize', onMarkersResize);
+
+            // La línea de progreso y la activación de cada dot/año usan la MISMA
+            // referencia (el punto medio del viewport) para que el dot se encienda
+            // exactamente cuando la línea llena lo alcanza, sin desfasajes.
+            let ticking = false;
+
+            function updateOnScroll() {
+                ticking = false;
+                const trackRect = track.getBoundingClientRect();
+                const viewportMid = window.innerHeight * 0.5;
+                const sectionHeight = trackRect.height;
+                const progress = Math.min(Math.max((viewportMid - trackRect.top) / sectionHeight, 0), 1);
+                progressBar.style.transform = `scaleY(${progress})`;
+
+                markers.forEach(({ dot, year }) => {
+                    if (!dot) return;
+                    const dotRect = dot.getBoundingClientRect();
+                    const dotMid = dotRect.top + dotRect.height / 2;
+                    const active = dotMid <= viewportMid;
+                    if (active) {
+                        dot.classList.add('is-active');
+                        if (year) year.classList.add('is-active');
+                    } else if (!reduceMotion) {
+                        dot.classList.remove('is-active');
+                        if (year) year.classList.remove('is-active');
+                    }
+                });
+            }
+
+            function onScroll() {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(updateOnScroll);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            updateOnScroll();
+        })();
+
+        // Link Preview: captura (Microlink) fija dentro de la tarjeta, debajo del estado del proyecto
+        (function () {
+            const links = document.querySelectorAll('a[data-preview-url]');
+            if (!links.length) return;
+
+            const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (!canHover) return;
+
+            const cache = new Map();
+
+            links.forEach((link) => {
+                const url = link.getAttribute('data-preview-url');
+                const slot = link.closest('.exp-sidebar')?.querySelector('.link-preview-slot');
+                if (!slot) return;
+
+                const name = slot.getAttribute('data-preview-name') || '';
+                const img = document.createElement('img');
+                const label = document.createElement('div');
+                label.className = 'link-preview-label';
+                label.textContent = name;
+                slot.appendChild(img);
+                slot.appendChild(label);
+
+                let loaded = false;
+
+                function loadPreview() {
+                    if (loaded) return;
+                    loaded = true;
+                    if (cache.has(url)) {
+                        img.src = cache.get(url);
+                        img.classList.add('is-loaded');
+                        label.style.display = 'none';
+                        return;
+                    }
+                    const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`;
+                    img.onload = () => {
+                        img.classList.add('is-loaded');
+                        label.style.display = 'none';
+                        cache.set(url, screenshotUrl);
+                    };
+                    img.onerror = () => {
+                        loaded = false;
+                        img.removeAttribute('src');
+                    };
+                    img.src = screenshotUrl;
+                }
+
+                link.addEventListener('mouseenter', () => {
+                    slot.classList.add('is-visible');
+                    loadPreview();
+                });
+
+                link.addEventListener('mouseleave', () => {
+                    slot.classList.remove('is-visible');
+                });
+            });
+        })();
+
+        // Download CV Logic: se abre un modal con apariencia de terminal
+        // (igual que el modal de contacto): tipea unos comandos rápido,
+        // arma una barra de progreso estilo Linux con caracteres # / .,
+        // y al llegar a 100% la ventana sufre un glitch y muestra
+        // "Descarga completa" adentro de la misma terminal emulada.
+        document.querySelectorAll('.btn-cv-trigger').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const isEn = document.body.classList.contains('lang-en');
+                const cvFileName = 'CV Luis Africano 2026.pdf';
+                const cvFilePath = 'CV/CV Luis Africano 2026.pdf';
+
+                const modalTitle = isEn ? 'Downloading CV' : 'Descargando CV';
+                const doneLabel = isEn ? '\u2714 Download complete' : '\u2714 Descarga completa';
+
+                // Colores invertidos respecto del esquema "clásico" (comando
+                // en cian / salida en teal): acá, igual que en la animación
+                // de código de fondo, el comando va en teal (sin clase, el
+                // color base de .term-output) y la salida en cian (term-cmd).
+                const BAR_WIDTH = 28;
+                const fullBar = '[' + '#'.repeat(BAR_WIDTH) + '] 100%';
+
+                const introLines = [
+                    { type: 'type', text: 'root@luisafricano:~$ ./download_cv.sh', pauseAfter: 120 },
+                    { type: 'type', text: isEn ? 'Resolving host... OK' : 'Resolviendo host... OK', className: 'term-cmd', pauseAfter: 60 },
+                    { type: 'type', text: isEn ? 'Connecting (TLS)... OK' : 'Conectando (TLS)... OK', className: 'term-cmd', pauseAfter: 60 },
+                    { type: 'type', text: 'GET /CV/CV_Luis_Africano_2026.pdf 200 OK', className: 'term-cmd', pauseAfter: 60 },
+                    { type: 'type', text: 'Length: 258335 (252K) [application/pdf]', className: 'term-cmd', pauseAfter: 100 },
+                    { type: 'blank' },
+                ];
+
+                // Estado final completo (intro + barra al 100% + mensaje de
+                // descarga completa), para medir el alto antes de tipear y
+                // que el modal ya se abra con su tamaño definitivo.
+                const finalActions = introLines.concat([
+                    { type: 'type', text: fullBar, className: 'term-cmd' },
+                    { type: 'blank' },
+                    { type: 'type', text: doneLabel, className: 'term-cmd' },
+                ]);
+
+                let stopTypewriter = null;
+                let barRafId = null;
+
+                Swal.fire({
+                    html: `
+                    <div class="swal-terminal-titlebar">
+                        <span class="term-dot term-dot-red" onclick="Swal.close()" title="${isEn ? 'Close' : 'Cerrar'}"></span>
+                        <span class="term-dot term-dot-yellow"></span>
+                        <span class="term-dot term-dot-green"></span>
+                        <span class="swal-terminal-title">${modalTitle}</span>
+                    </div>
+                    <div class="swal-terminal-body">
+                        <div class="swal-terminal-content">
+                            <div class="term-output" id="cv-term-output"></div>
+                        </div>
+                    </div>
+                `,
+                    background: '#000000',
+                    showConfirmButton: false,
+                    showCloseButton: false,
+                    customClass: {
+                        popup: 'swal-animated-modal swal-terminal-popup'
+                    },
+                    didOpen: () => {
+                        const output = Swal.getHtmlContainer().querySelector('#cv-term-output');
+                        const popup = Swal.getPopup();
+                        const handle = popup?.querySelector('.swal-terminal-titlebar');
+                        if (popup && handle) enableTerminalDrag(popup, handle);
+                        if (!output) return;
+
+                        // En desktop: medir el alto del estado final completo
+                        // (intro + barra al 100% + mensaje final) y fijarlo
+                        // antes de tipear, así el modal ya se abre con su
+                        // ancho y alto definitivos y no cambia de tamaño.
+                        if (window.matchMedia('(min-width: 769px)').matches) {
+                            output.innerHTML = buildFinalTerminalHtml(finalActions);
+                            output.style.minHeight = output.offsetHeight + 'px';
+                            output.innerHTML = '';
+                        }
+
+                        function onProgressComplete() {
+                            output.classList.add('term-glitch');
+                            output.addEventListener('animationend', () => {
+                                output.classList.remove('term-glitch');
+                                runTerminalTypewriter(output, [
+                                    { type: 'blank' },
+                                    { type: 'type', text: doneLabel, className: 'term-cmd', pauseAfter: 0 },
+                                ], {
+                                    charsPerSec: 60,
+                                    onComplete: () => {
+                                        // Recién ahora, con "Descarga completa" ya
+                                        // visible, se dispara la descarga real, y el
+                                        // modal se cierra apenas el navegador toma
+                                        // el archivo (ventana de "Guardar como").
+                                        const link = document.createElement('a');
+                                        link.href = cvFilePath;
+                                        link.download = cvFileName;
+                                        document.body.appendChild(link);
+                                        link.click();
+                                        document.body.removeChild(link);
+                                        Swal.close();
+                                    }
+                                });
+                            }, { once: true });
+                        }
+
+                        stopTypewriter = runTerminalTypewriter(output, introLines, {
+                            charsPerSec: 200,
+                            onComplete: () => {
+                                const cursor = output.querySelector('.term-cursor');
+                                if (cursor) cursor.remove();
+
+                                const barLine = document.createElement('div');
+                                barLine.className = 'term-line term-cmd';
+                                output.appendChild(barLine);
+
+                                const DURATION = 1000;
+                                const startTime = performance.now();
+
+                                function updateBar(now) {
+                                    const t = Math.min(1, (now - startTime) / DURATION);
+                                    const pct = Math.round(t * 100);
+                                    const filled = Math.round((pct / 100) * BAR_WIDTH);
+                                    barLine.textContent = '[' + '#'.repeat(filled) + '.'.repeat(BAR_WIDTH - filled) + '] ' + pct + '%';
+
+                                    if (t < 1) {
+                                        barRafId = requestAnimationFrame(updateBar);
+                                    } else {
+                                        onProgressComplete();
+                                    }
+                                }
+                                barRafId = requestAnimationFrame(updateBar);
+                            }
+                        });
+                    },
+                    willClose: () => {
+                        if (stopTypewriter) {
+                            stopTypewriter();
+                            stopTypewriter = null;
+                        }
+                        if (barRafId) {
+                            cancelAnimationFrame(barRafId);
+                            barRafId = null;
+                        }
+                    }
+                });
+            });
+        });
+
+        // Arma el HTML final (todo revelado) de una tanda de acciones del
+        // typewriter, para poder medir la altura total que va a ocupar
+        // antes de empezar a tipear.
+        function buildFinalTerminalHtml(actions) {
+            const body = actions.map(action => {
+                if (action.type === 'type') {
+                    return `<div class="term-line ${action.className || ''}">${action.text}</div>`;
+                }
+                if (action.type === 'buttons') {
+                    return `<div class="term-btn-row is-visible">${action.html}</div>`;
+                }
+                return `<div class="term-line"></div>`;
+            }).join('');
+            // El cursor final queda "suelto" dentro del contenedor (no es
+            // hijo de la última línea cuando la última acción es un bloque
+            // de botones), así que hay que incluirlo también acá para que
+            // la altura medida coincida con la altura real una vez que
+            // termina de tipearse todo.
+            return body + '<span class="term-cursor"></span>';
+        }
+
+        // Terminal typewriter: "genera" el contenido real del modal (no
+        // decorativo) tipeándolo línea por línea, como la salida de un
+        // comando de terminal. Los botones aparecen apenas termina de
+        // tipearse el bloque al que pertenecen.
+        function runTerminalTypewriter(container, actions, opts) {
+            const speed = (opts && opts.charsPerSec) || 90;
+            const onComplete = opts && opts.onComplete;
+            let idx = 0;
+            let charIdx = 0;
+            let currentLineEl = null;
+            let currentTextSpan = null;
+            let currentCursorSpan = null;
+            let rafId = null;
+            let lastTime = null;
+            let pauseUntil = 0;
+            let stopped = false;
+
+            function appendCursor() {
+                const cursor = document.createElement('span');
+                cursor.className = 'term-cursor';
+                (currentLineEl || container).appendChild(cursor);
+            }
+
+            function step(now) {
+                if (stopped) return;
+                if (lastTime === null) lastTime = now;
+                const dt = now - lastTime;
+                lastTime = now;
+
+                if (now < pauseUntil) {
+                    rafId = requestAnimationFrame(step);
+                    return;
+                }
+
+                if (idx >= actions.length) {
+                    appendCursor();
+                    if (onComplete) onComplete();
+                    return;
+                }
+
+                const action = actions[idx];
+
+                if (action.type === 'type') {
+                    if (!currentLineEl) {
+                        currentLineEl = document.createElement('div');
+                        currentLineEl.className = 'term-line ' + (action.className || '');
+                        currentTextSpan = document.createElement('span');
+                        currentLineEl.appendChild(currentTextSpan);
+                        // Cursor "en vivo" mientras se tipea esta línea, igual
+                        // que el bloque parpadeante de la animación de fondo.
+                        currentCursorSpan = document.createElement('span');
+                        currentCursorSpan.className = 'term-cursor';
+                        currentLineEl.appendChild(currentCursorSpan);
+                        container.appendChild(currentLineEl);
+                        charIdx = 0;
+                    }
+                    const charsToAdd = Math.max(1, Math.round((dt / 1000) * speed));
+                    charIdx = Math.min(action.text.length, charIdx + charsToAdd);
+                    currentTextSpan.textContent = action.text.slice(0, charIdx);
+                    if (charIdx >= action.text.length) {
+                        if (currentCursorSpan) currentCursorSpan.remove();
+                        idx++;
+                        currentLineEl = null;
+                        currentTextSpan = null;
+                        currentCursorSpan = null;
+                        pauseUntil = now + (action.pauseAfter || 30);
+                    }
+                } else if (action.type === 'buttons') {
+                    const wrap = document.createElement('div');
+                    wrap.className = 'term-btn-row';
+                    wrap.innerHTML = action.html;
+                    container.appendChild(wrap);
+                    requestAnimationFrame(() => wrap.classList.add('is-visible'));
+                    idx++;
+                    pauseUntil = now + (action.pauseAfter || 60);
+                } else if (action.type === 'blank') {
+                    const blank = document.createElement('div');
+                    blank.className = 'term-line';
+                    container.appendChild(blank);
+                    idx++;
+                }
+
+                rafId = requestAnimationFrame(step);
+            }
+
+            rafId = requestAnimationFrame(step);
+
+            return function stop() {
+                stopped = true;
+                if (rafId) cancelAnimationFrame(rafId);
+            };
+        }
+
+        // Permite arrastrar el modal sosteniendo el clic en su barra de
+        // título, como si fuera una ventana real del sistema operativo.
+        function enableTerminalDrag(popup, handle) {
+            let dragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            function onPointerDown(e) {
+                if (e.target.closest('.term-dot')) return;
+                dragging = true;
+                const rect = popup.getBoundingClientRect();
+                const point = e.touches ? e.touches[0] : e;
+                offsetX = point.clientX - rect.left;
+                offsetY = point.clientY - rect.top;
+                popup.style.position = 'fixed';
+                popup.style.margin = '0';
+                popup.style.left = rect.left + 'px';
+                popup.style.top = rect.top + 'px';
+                handle.style.cursor = 'grabbing';
+                document.addEventListener('mousemove', onPointerMove);
+                document.addEventListener('mouseup', onPointerUp);
+                document.addEventListener('touchmove', onPointerMove, { passive: false });
+                document.addEventListener('touchend', onPointerUp);
+            }
+
+            function onPointerMove(e) {
+                if (!dragging) return;
+                e.preventDefault();
+                const point = e.touches ? e.touches[0] : e;
+                const maxLeft = Math.max(window.innerWidth - popup.offsetWidth, 0);
+                const maxTop = Math.max(window.innerHeight - popup.offsetHeight, 0);
+                const left = Math.min(Math.max(point.clientX - offsetX, 0), maxLeft);
+                const top = Math.min(Math.max(point.clientY - offsetY, 0), maxTop);
+                popup.style.left = left + 'px';
+                popup.style.top = top + 'px';
+            }
+
+            function onPointerUp() {
+                dragging = false;
+                handle.style.cursor = 'grab';
+                document.removeEventListener('mousemove', onPointerMove);
+                document.removeEventListener('mouseup', onPointerUp);
+                document.removeEventListener('touchmove', onPointerMove);
+                document.removeEventListener('touchend', onPointerUp);
+            }
+
+            handle.addEventListener('mousedown', onPointerDown);
+            handle.addEventListener('touchstart', onPointerDown, { passive: true });
+        }
+
+        // Contact Modal Logic
+        document.querySelectorAll('.btn-contact-trigger').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const isEn = document.body.classList.contains('lang-en');
+
+                const modalTitle = isEn ? 'Contact Channels' : 'Canales de Contacto';
+                
+                const emailTitle = isEn ? 'By Email' : 'Por Correo';
+                const copyEmailBtn = isEn ? 'Copy e-mail' : 'Copiar e-mail';
+                const sendEmailBtn = isEn ? 'Send e-mail' : 'Enviar e-mail';
+                const copyEmailSuccess = isEn ? 'Email copied' : 'Correo copiado';
+
+                const whatsappTitle = isEn ? 'By WhatsApp' : 'Por WhatsApp';
+                const sendWhatsappBtn = isEn ? 'Send Message' : 'Enviar Mensaje';
+
+                const callTitle = isEn ? 'By Phone Call' : 'Por Llamada';
+                const copyNumberBtn = isEn ? 'Copy Number' : 'Copiar Número';
+                const callNowBtn = isEn ? 'Call Now' : 'Llamar Ahora';
+                const copyNumberSuccess = isEn ? 'Number copied' : 'Número copiado';
+
+                let stopContactTypewriter = null;
+
+                const loadingLine = isEn ? '> Loading contact channels...' : '> Cargando canales de contacto...';
+
+                const typewriterActions = [
+                    { type: 'type', text: 'root@luisafricano:~$ cat contact_channels.sh', className: 'term-cmd', pauseAfter: 150 },
+                    { type: 'type', text: loadingLine, className: 'term-comment', pauseAfter: 180 },
+                    { type: 'blank' },
+                    { type: 'type', text: `## ${emailTitle}`, className: 'term-comment', pauseAfter: 30 },
+                    { type: 'type', text: '  intertronick.arg@gmail.com', className: 'term-value-line', pauseAfter: 30 },
+                    {
+                        type: 'buttons', pauseAfter: 80, html: `
+                        <button onclick="copyText('intertronick.arg@gmail.com', '${copyEmailSuccess}')" class="term-btn"><i class="fa-regular fa-copy"></i> ${copyEmailBtn}</button>
+                        <a href="mailto:intertronick.arg@gmail.com" class="term-btn"><i class="fa-solid fa-paper-plane"></i> ${sendEmailBtn}</a>
+                    ` },
+                    { type: 'blank' },
+                    { type: 'type', text: `## ${whatsappTitle}`, className: 'term-comment', pauseAfter: 30 },
+                    {
+                        type: 'buttons', pauseAfter: 80, html: `
+                        <a href="https://api.whatsapp.com/send/?phone=543516769103&text&type=phone_number&app_absent=0" target="_blank" class="term-btn"><i class="fa-brands fa-whatsapp"></i> ${sendWhatsappBtn}</a>
+                    ` },
+                    { type: 'blank' },
+                    { type: 'type', text: `## ${callTitle}`, className: 'term-comment', pauseAfter: 30 },
+                    { type: 'type', text: '  +54 351 676 9103', className: 'term-value-line', pauseAfter: 30 },
+                    {
+                        type: 'buttons', pauseAfter: 60, html: `
+                        <button onclick="copyText('+543516769103', '${copyNumberSuccess}')" class="term-btn"><i class="fa-regular fa-copy"></i> ${copyNumberBtn}</button>
+                        <a href="tel:+543516769103" class="term-btn"><i class="fa-solid fa-phone"></i> ${callNowBtn}</a>
+                    ` },
+                ];
+
+                Swal.fire({
+                    html: `
+                    <div class="swal-terminal-titlebar">
+                        <span class="term-dot term-dot-red" onclick="Swal.close()" title="${isEn ? 'Close' : 'Cerrar'}"></span>
+                        <span class="term-dot term-dot-yellow"></span>
+                        <span class="term-dot term-dot-green"></span>
+                        <span class="swal-terminal-title">${modalTitle}</span>
+                    </div>
+                    <div class="swal-terminal-body">
+                        <div class="swal-terminal-content">
+                            <div class="term-output" id="term-output"></div>
+                        </div>
+                    </div>
+                `,
+                    background: '#000000',
+                    showConfirmButton: false,
+                    showCloseButton: false,
+                    customClass: {
+                        popup: 'swal-animated-modal swal-terminal-popup'
+                    },
+                    didOpen: () => {
+                        const output = Swal.getHtmlContainer().querySelector('#term-output');
+                        if (output) {
+                            // En desktop: medir la altura final del contenido
+                            // completo y fijarla antes de tipear, para que el
+                            // modal ya se muestre con su tamaño definitivo.
+                            if (window.matchMedia('(min-width: 769px)').matches) {
+                                output.innerHTML = buildFinalTerminalHtml(typewriterActions);
+                                output.style.minHeight = output.offsetHeight + 'px';
+                                output.innerHTML = '';
+                            }
+                            stopContactTypewriter = runTerminalTypewriter(output, typewriterActions, { charsPerSec: 110 });
+                        }
+
+                        const popup = Swal.getPopup();
+                        const handle = popup?.querySelector('.swal-terminal-titlebar');
+                        if (popup && handle) enableTerminalDrag(popup, handle);
+                    },
+                    willClose: () => {
+                        if (stopContactTypewriter) {
+                            stopContactTypewriter();
+                            stopContactTypewriter = null;
+                        }
+                    }
+                });
+            });
+        });
+
+        // Copy helper function
+        window.copyText = function (text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: message,
+                    background: '#000000',
+                    color: themeColor('--primary-cyan'),
+                    timer: 1500,
+                    showConfirmButton: false,
+                    customClass: {
+                        popup: 'swal-animated-modal'
+                    }
+                });
+            });
+        };
+
+        // Selector de temas TEMPORAL: oculto (ver comentario junto al HTML
+        // del selector). Se deja el código comentado, sin borrar, por si se
+        // necesita reactivar la comparación de paletas más adelante.
+        /*
+        (function () {
+            const THEME_KEY = 'site-theme-preview';
+            const wrapper = document.getElementById('theme-switcher');
+            const toggle = document.getElementById('theme-switcher-toggle');
+            const panel = document.getElementById('theme-switcher-panel');
+            const options = document.querySelectorAll('.theme-option');
+            if (!wrapper || !toggle || !panel) return;
+
+            function applyTheme(id) {
+                if (id) {
+                    document.documentElement.setAttribute('data-theme', id);
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                }
+                localStorage.setItem(THEME_KEY, id || '');
+                window.dispatchEvent(new Event('themechange'));
+                options.forEach((opt) => {
+                    opt.classList.toggle('is-active', opt.dataset.themeId === id);
+                });
+            }
+
+            function closePanel() {
+                panel.setAttribute('hidden', '');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+
+            options.forEach((opt) => {
+                opt.addEventListener('click', () => applyTheme(opt.dataset.themeId));
+            });
+
+            toggle.addEventListener('click', () => {
+                const isOpen = !panel.hasAttribute('hidden');
+                if (isOpen) {
+                    closePanel();
+                } else {
+                    panel.removeAttribute('hidden');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!wrapper.contains(e.target)) closePanel();
+            });
+
+            const saved = localStorage.getItem(THEME_KEY);
+            if (saved) applyTheme(saved);
+        })();
+        */
+    </script>
+
+    <!-- "Luis Africano" del header: dibujado como trazos SVG con la tipografía real
+         del sitio (Outfit), animado con anime.js. Ver comentario en css/style.css
+         junto a .brand-name-svg. -->
+    <script type="module">
+        import { parse as parseFont } from 'https://cdn.jsdelivr.net/npm/opentype.js@2.0.0/dist/opentype.min.mjs';
+        import { animate, svg, stagger } from 'https://cdn.jsdelivr.net/npm/animejs@4/+esm';
+
+        const OUTFIT_TTF = 'https://fonts.gstatic.com/s/outfit/v15/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4E.ttf';
+        const SVG_NS = 'http://www.w3.org/2000/svg';
+        const WORD = 'Luis Africano';
+        const FONT_SIZE = 100;
+
+        function commandsToPathData(commands) {
+            return commands.map((c) => {
+                switch (c.type) {
+                    case 'M': return `M${c.x} ${c.y}`;
+                    case 'L': return `L${c.x} ${c.y}`;
+                    case 'C': return `C${c.x1} ${c.y1} ${c.x2} ${c.y2} ${c.x} ${c.y}`;
+                    case 'Q': return `Q${c.x1} ${c.y1} ${c.x} ${c.y}`;
+                    case 'Z': return 'Z';
+                    default: return '';
+                }
+            }).join(' ');
+        }
+
+        async function buildBrandName() {
+            const container = document.querySelector('.brand-name-svg');
+            const brand = document.querySelector('.nav-brand');
+            if (!container) return;
+
+            const buffer = await fetch(OUTFIT_TTF).then((res) => res.arrayBuffer());
+            const font = parseFont(buffer);
+            const scale = FONT_SIZE / font.unitsPerEm;
+            const baseline = font.ascender * scale;
+
+            let x = 0;
+            const letterPaths = [];
+            for (const char of WORD) {
+                const glyph = font.charToGlyph(char);
+                const glyphPath = glyph.getPath(x, baseline, FONT_SIZE);
+                const d = commandsToPathData(glyphPath.commands);
+                if (d) {
+                    const el = document.createElementNS(SVG_NS, 'path');
+                    el.setAttribute('d', d);
+                    container.appendChild(el);
+                    letterPaths.push(el);
+                }
+                x += glyph.advanceWidth * scale;
+            }
+
+            const pad = FONT_SIZE * 0.08;
+            const top = baseline - font.ascender * scale - pad;
+            const height = (font.ascender - font.descender) * scale + pad * 2;
+            container.setAttribute('viewBox', `${-pad} ${top} ${x + pad * 2} ${height}`);
+
+            const drawable = svg.createDrawable(letterPaths);
+            const drawAnimation = animate(drawable, {
+                draw: ['0 0', '0 1'],
+                ease: 'inOutQuad',
+                duration: 1400,
+                delay: stagger(45),
+                loop: true,
+                loopDelay: 3000,
+            });
+            if (brand) brand.addEventListener('mouseenter', () => drawAnimation.restart());
+        }
+
+        buildBrandName().catch((err) => console.error('No se pudo dibujar "Luis Africano":', err));
+    </script>
+</body>
+
+</html>
